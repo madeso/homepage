@@ -1,7 +1,7 @@
 +++
 date = "2017-04-21T22:04:16+02:00"
 draft = false
-title = "_index"
+title = "Epic Treasure Hunt"
 
 +++
 
