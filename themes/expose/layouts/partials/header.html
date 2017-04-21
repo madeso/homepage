@@ -21,10 +21,20 @@
 {{ if eq $p.Kind "section" }}
 <!-- hack to only get the root sections, and not the sub sections -->
 {{ if eq $p.RelPermalink (printf "/%s/" $p.Section) }}
-<a href="{{.Permalink}}">{{.Title}}</a>
+{{partial "headerlink.html" .}}
 {{ end }}
 {{ end }}
 {{ end }}
+
+{{ range $i, $p := .Site.Pages }}
+{{ if eq $p.Kind "page" }}
+<!-- hack to only get the root sections, and not the sub sections -->
+{{ if eq $p.Section "" }}
+{{partial "headerlink.html" .}}
+{{ end }}
+{{ end }}
+{{ end }}
+
 </p>
 
 <hr>
