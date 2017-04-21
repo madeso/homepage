@@ -1,8 +1,15 @@
+<p>{{.Date}}</p>
+<a href="{{.Permalink}}"><h3>{{.Title}}</h3></a>
+
 <p>
+kind: {{.Kind}}
+node: {{.IsNode}}
 type: {{.Type}}
 section: {{.Section}}
-kind: {{.Kind}}
+page: {{.IsPage}}
+trunc: {{.Truncated}}
 </p>
 
-<h3>{{.Title}}</h3>
+<p>{{.Summary}}</p>
 <p>{{.Content}}</p>
+<hr>
