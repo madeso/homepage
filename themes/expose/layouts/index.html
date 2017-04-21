@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 
 {{ range $i, $p := .Site.Pages }}
-dog
+{{partial "fullpost.html" . }}
 {{ end }}
 
 {{ partial "footer.html" . }}
