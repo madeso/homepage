@@ -1,0 +1,156 @@
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+fieldset, img {
+    border: 0 none;
+}
+a:focus {
+    outline: medium none;
+}
+body {
+    overflow-y: scroll;
+}
+p {
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+ul, ol, dl {
+    margin: 10px 0;
+    padding-left: 15px;
+}
+dl {
+    margin: 10px 0;
+}
+dd {
+    padding-left: 30px;
+}
+td, th {
+    padding: 1px;
+}
+a:link, a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+fieldset {
+    border: 1px solid #C8C8C8;
+    margin: 10px 0;
+    padding: 0 10px 10px;
+}
+legend {
+    background: none repeat scroll 0 0 #FFFFFF;
+    padding: 0 10px;
+}
+form div {
+    margin: 10px 0;
+}
+textarea {
+    padding: 1px 0 1px 5px;
+}
+option {
+    padding: 0 0 1px 5px;
+}
+input[type="hidden"] {
+    display: none;
+}
+input[type="text"], input[type="password"] {
+    padding: 1px 0 1px 5px;
+    width: 300px;
+}
+button, input[type="button"], input[type="submit"] {
+    line-height: 100%;
+    padding: 2px 4px 2px 1px;
+    width: 100px;
+}
+input[type="button"], input[type="submit"], input[type="checkbox"], input[type="image"], input[type="radio"], input[type="reset"], select, button {
+    cursor: pointer;
+}
+textarea, input[type="text"], input[type="password"], select {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #C8C8C8;
+}
+textarea:hover, input[type="text"]:hover, input[type="password"]:hover, select:hover {
+    border-color: #AAAAAA;
+}
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, select:focus {
+    border-color: #8C8C8C;
+    outline: 2px solid #DCDCDC;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+h1 {
+    font-size: 24px;
+    line-height: 24px;
+    margin-top: 25px;
+}
+h2 {
+    font-size: 24px;
+    line-height: 24px;
+    margin-top: 25px;
+}
+h3 {
+    font-size: 18px;
+    line-height: 18px;
+    margin-top: 15px;
+}
+h4 {
+    font-size: 16px;
+    line-height: 16px;
+    margin-top: 15px;
+}
+h5 {
+    font-size: 14px;
+    line-height: 14px;
+    margin-top: 10px;
+}
+h6 {
+    font-size: 14px;
+    line-height: 14px;
+    margin-top: 10px;
+}
+hr {
+    background: none repeat scroll 0 0 #C8C8C8;
+    border: medium none;
+    display: block;
+    height: 1px;
+    margin: 15px 0;
+}
+q {
+    font-style: italic;
+}
+blockquote {
+    font-size: 130%;
+    font-style: italic;
+    margin: 10px 0 10px 15px;
+}
+blockquote > *:first-child:first-letter {
+    font-size: 150%;
+}
+pre {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #FAFAFA;
+    border-color: #AAB4BE #AAB4BE #AAB4BE #B4B4B4;
+    border-image: none;
+    border-style: dotted dotted dotted solid;
+    border-width: 1px 1px 1px 20px;
+    color: #2E8B57;
+    font-family: "Courier New",Courier,monospace;
+    font-size: 90%;
+    margin: 10px 0;
+    padding: 5px 0 5px 10px;
+    white-space: pre-wrap;
+}
+acronym, abbr {
+    border-bottom: 1px dashed #969696;
+    cursor: help;
+    font-variant: small-caps;
+    text-transform: lowercase;
+}

@@ -1,0 +1,16 @@
+a:link, a:visited
+{
+	text-decoration: none;
+}
+
+a {
+	color: blue;
+	text-decoration: none;
+}
+
+div#content
+{
+	width: 905px;
+	margin:auto;
+	position: relative;
+}
