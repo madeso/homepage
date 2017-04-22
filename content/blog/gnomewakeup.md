@@ -2,7 +2,7 @@
 date = "2016-09-18T14:34:04+02:00"
 draft = false
 title = "Keep your ubuntu-gnome from waking up at random"
-
+tags = ["hibernate", "linux", "ubuntu"]
 +++
 
 I have tried using /proc/acpi/wakeup and I've tried looking in /sys/bus/usb/devices/SOMETHING/power/wakeup for devices that will wake up the computer, however I finally fixed my random wakeup problems with a tool called acpitool.

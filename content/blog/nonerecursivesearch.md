@@ -2,7 +2,7 @@
 date = "2016-08-27T13:07:39+02:00"
 draft = false
 title = "Non recursive file searching in Nautilus"
-
+tags = ["linux", "nautilus", "ubuntu"]
 +++
 
 Recursive search is the default in nautilus (search in subfolders), but I prefer type ahead search(only search in current folder).
