@@ -1,5 +1,5 @@
 +++
-date = "2017-04-21T22:07:53+02:00"
+date = "2016-08-26T19:29:53+02:00"
 draft = false
 title = "Revert google+ to a standard blogger profile on blogger"
 

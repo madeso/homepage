@@ -1,5 +1,5 @@
 +++
-date = "2017-04-21T22:06:53+02:00"
+date = "2017-02-22T08:38:53+01:00"
 draft = false
 title = "A better git log"
 
