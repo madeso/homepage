@@ -1,6 +1,8 @@
 {{ partial "header.html" . }}
 
+{{if eq .RelPermalink (printf "/%s/" .Section)}}
 <a href="{{.RSSLink}}" type="application/rss+xml"><i class="fa fa-rss"></i></i>
+{{end}}
 
 {{partial "fullpost.html" . }}
 
