@@ -2,3 +2,6 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Gustav Jansson"
 theme = "expose"
+
+[Params]
+DateFormat = "Mon Jan 2 15:04:05 MST 2006"
