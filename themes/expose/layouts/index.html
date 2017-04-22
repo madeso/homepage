@@ -1,7 +1,13 @@
 {{ partial "header.html" . }}
 
 {{ range $i, $p := .Site.Pages }}
+{{ if eq .Type "project" }}
+{{ if not (eq .RelPermalink "/project/") }}
+{{ if .Params.params.featured }}
 {{partial "fullpost.html" . }}
+{{ end }}
+{{ end }}
+{{ end }}
 {{ end }}
 
 {{ partial "footer.html" . }}
