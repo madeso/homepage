@@ -6,17 +6,25 @@
   <title>{{ .Title }}</title>
   <link rel="canonical" href="{{ .Permalink }}">
 
-  <link rel="stylesheet" href="css/reset.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="external/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{.Site.BaseURL}}css/reset.css" />
+  <link rel="stylesheet" href="{{.Site.BaseURL}}css/style.css" />
+  <link rel="stylesheet" href="{{.Site.BaseURL}}external/fontawesome/css/font-awesome.min.css">
 </head>
 
 <body lang="en">
 
 <div id="content">
 
-<h1>{{ .Title }}</h1>
+<h1>{{ .Site.Title }}</h1>
 <p>
+<!-- Home link -->
+{{ range $i, $p := .Site.Pages }}
+{{ if eq $p.Kind "home" }}
+{{partial "headerlink.html" .}}
+{{ end }}
+{{ end }}
+
+<!-- each section root -->
 {{ range $i, $p := .Site.Pages }}
 {{ if eq $p.Kind "section" }}
 <!-- hack to only get the root sections, and not the sub sections -->
@@ -26,9 +34,9 @@
 {{ end }}
 {{ end }}
 
+<!-- Each root page -->
 {{ range $i, $p := .Site.Pages }}
 {{ if eq $p.Kind "page" }}
-<!-- hack to only get the root sections, and not the sub sections -->
 {{ if eq $p.Section "" }}
 {{partial "headerlink.html" .}}
 {{ end }}
