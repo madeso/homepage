@@ -2,7 +2,7 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Gustav Jansson"
 theme = "expose"
-disqusshortname = "madesopage"
+# disqusshortname = "madesopage"
 
 [Params]
 DateFormat = "Monday, Jan 2, 2006 at 15:04"
