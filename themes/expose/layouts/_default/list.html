@@ -1,0 +1,12 @@
+{{ partial "header.html" . }}
+
+{{partial "fullpost.html" . }}
+
+{{.Data}}
+
+<h1>List</h1>
+{{ range $i, $p := .Pages }}
+{{partial "fullpost.html" . }}
+{{ end }}
+
+{{ partial "footer.html" . }}
