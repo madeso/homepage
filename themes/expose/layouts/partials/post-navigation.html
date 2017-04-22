@@ -1,18 +1,16 @@
 <!-- Stolen from cocoa-eh theme -->
 {{ if .Site.Params.posts_navigation }}
     <div class="navigation">
+      {{ if or .PrevInSection .NextInSection }}
         {{ if .PrevInSection }}
-        <div>
-            <img class="icon" src="/img/back.svg" alt="back" />
+            <i class="fa fa-arrow-left"></i>
             <a href="{{ .PrevInSection.Permalink }}">{{ .PrevInSection.Title }}</a>
-        </div>
         {{ end }}
-        <div style="width: 100%;"></div>
+        &nbsp;{{.Title}}&nbsp;
         {{ if .NextInSection }}
-        <div>
             <a href="{{ .NextInSection.Permalink }}">{{ .NextInSection.Title }}</a>
-            <img class="icon" src="/img/next.svg" alt="next" />
-        </div>
+            <i class="fa fa-arrow-right"></i>
         {{ end }}
+      {{ end }}
     </div>
 {{ end }}
