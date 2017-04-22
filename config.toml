@@ -5,3 +5,5 @@ theme = "expose"
 
 [Params]
 DateFormat = "Monday, Jan 2, 2006 at 15:04"
+latestpostcount = 1
+latestdevlogcount = 3

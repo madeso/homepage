@@ -1,5 +1,8 @@
 {{ partial "header.html" . }}
 
+{{partial "fullpost.html" . }}
+
+<h2>Featured projects</h2>
 {{ range $i, $p := .Site.Pages }}
 {{ if eq .Type "project" }}
 {{ if not (eq .RelPermalink "/project/") }}
@@ -9,5 +12,53 @@
 {{ end }}
 {{ end }}
 {{ end }}
+
+<h2>Latest devlog</h2>
+{{ if isset .Site.Params "latestdevlogcount" }}
+    <div class="posts">
+    {{ $posts := where .Data.Pages "Section" "devlog" }}
+    {{ $postcount := len $posts }}
+    {{ if gt $postcount 0 }}
+        <div class="page-heading">Latest posts</div>
+        <ul>
+        {{ range (first .Site.Params.latestdevlogcount $posts).GroupByDate "Jan, 2006" "desc" }}
+            <li class="groupby">{{ .Key }}</li>
+            {{ range .Pages.ByPublishDate }}
+                {{ partial "fullpost.html" . }}
+            {{ end }}
+        {{ end }}
+        </ul>
+
+        {{ if gt $postcount .Site.Params.latestdevlogcount }}
+            <a href="./devlog/" class="see-more">See more ...</a>
+        {{ end }}
+    {{ end }}
+    </div>
+{{ end }}
+
+<h2>Latest blog</h2>
+{{ if isset .Site.Params "latestpostcount" }}
+    <div class="posts">
+    {{ $posts := where .Data.Pages "Section" "blog" }}
+    {{ $postcount := len $posts }}
+    {{ if gt $postcount 0 }}
+        <div class="page-heading">Latest posts</div>
+        <ul>
+        {{ range (first .Site.Params.latestpostcount $posts).GroupByDate "Jan, 2006" "desc" }}
+            <li class="groupby">{{ .Key }}</li>
+            {{ range .Pages.ByPublishDate }}
+                {{ partial "fullpost.html" . }}
+            {{ end }}
+        {{ end }}
+        </ul>
+
+        {{ if gt $postcount .Site.Params.latestpostcount }}
+            <a href="./blog/" class="see-more">See more ...</a>
+        {{ end }}
+    {{ end }}
+    </div>
+{{ end }}
+
+
 
 {{ partial "footer.html" . }}
