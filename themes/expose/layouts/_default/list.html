@@ -5,8 +5,11 @@
 {{.Data}}
 
 <h1>List</h1>
-{{ range $i, $p := .Pages }}
+{{$section := .Section }}
+{{ range $i, $p := .Site.Pages }}
+{{ if eq .Section $section }}
 {{partial "fullpost.html" . }}
+{{ end }}
 {{ end }}
 
 {{ partial "footer.html" . }}
