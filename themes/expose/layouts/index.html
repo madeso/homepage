@@ -16,7 +16,8 @@
 <h2>Latest devlog</h2>
 {{ if isset .Site.Params "latestdevlogcount" }}
     <div class="posts">
-    {{ $posts := where .Data.Pages "Section" "devlog" }}
+    {{ $all_posts := where .Site.Pages "Section" "devlog" }}
+    {{ $posts := where $all_posts "RelPermalink" "!=" "/devlog/" }}
     {{ $postcount := len $posts }}
     {{ if gt $postcount 0 }}
         <div class="page-heading">Latest posts</div>
@@ -39,7 +40,8 @@
 <h2>Latest blog</h2>
 {{ if isset .Site.Params "latestpostcount" }}
     <div class="posts">
-    {{ $posts := where .Data.Pages "Section" "blog" }}
+    {{ $all_posts := where .Site.Pages "Section" "blog" }}
+    {{ $posts := where $all_posts "RelPermalink" "!=" "/blog/" }}
     {{ $postcount := len $posts }}
     {{ if gt $postcount 0 }}
         <div class="page-heading">Latest posts</div>
