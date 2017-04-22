@@ -4,4 +4,4 @@ title = "Gustav Jansson"
 theme = "expose"
 
 [Params]
-DateFormat = "Mon Jan 2 15:04:05 MST 2006"
+DateFormat = "Monday, Jan 2, 2006 at 15:04"
