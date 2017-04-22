@@ -14,7 +14,7 @@ rss: {{.RSSLink}}
 </p>
 
 <p>{{.Summary}}</p>
-<p>{{.Content}}</p>
+<p>{{partial "content.html" . }}</p>
 
 {{partial "taglist.html" . }}
 
