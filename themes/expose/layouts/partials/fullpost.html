@@ -1,4 +1,5 @@
 <p>{{.Date.Format $.Site.Params.DateFormat}}</p>
+<p>{{.Lastmod.Format $.Site.Params.DateFormat}}</p>
 <a href="{{.Permalink}}"><h3>{{.Title}}</h3></a>
 
 <p>
@@ -10,8 +11,12 @@ type: {{.Type}}
 section: {{.Section}}
 page: {{.IsPage}}
 trunc: {{.Truncated}}
+rss: {{.RSSLink}}
 </p>
 
 <p>{{.Summary}}</p>
 <p>{{.Content}}</p>
+
+<p>Keywords: {{.Keywords }}</p>
+
 <hr>
