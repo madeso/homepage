@@ -8,7 +8,9 @@
 {{$section := .Section }}
 {{ range $i, $p := .Site.Pages }}
 {{ if eq .Section $section }}
+{{ if not (eq .RelPermalink (printf "/%s/" $section)) }}
 {{partial "fullpost.html" . }}
+{{ end }}
 {{ end }}
 {{ end }}
 
