@@ -1,0 +1,14 @@
+{{ partial "header.html" . }}
+<section class="main">
+    <div class="container">
+        <div class="content">
+            <div class="posts">
+                <div class="page-heading">Posts about {{ .Title }}</div>
+                {{ range .Data.Pages.ByPublishDate }}
+                    {{ partial "fullpost.html" . }}
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+{{ partial "footer.html" . }}
