@@ -2,7 +2,8 @@
 date = "2017-04-21T22:04:31+02:00"
 draft = false
 title = "You can't escape the colors!"
-
+[Params]
+image = "main.png"
 +++
 
 Move the cursors away from the red items, charge and explode converting all reds into blue scores that need to be picked up before red can convert them.

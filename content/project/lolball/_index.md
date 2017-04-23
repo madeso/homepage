@@ -4,6 +4,7 @@ draft = false
 title = "Lolball"
 
 [Params]
+image = "main.png"
 featured = true
 Photos = "screens"
 +++

@@ -4,6 +4,7 @@ draft = false
 title = "Infection"
 
 [Params]
+image = "main.png"
 Photos = "screens"
 +++
 

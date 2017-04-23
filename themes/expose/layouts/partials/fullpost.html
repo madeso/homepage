@@ -1,6 +1,8 @@
 <p>{{.Date.Format $.Site.Params.DateFormat}}</p>
 <a href="{{.Permalink}}"><h3>{{.Title}}</h3></a>
 
+{{$self := .}}
+
 <p>
 Rel: {{.RelRef}}
 Perma: {{.RelPermalink}}
@@ -13,11 +15,14 @@ trunc: {{.Truncated}}
 rss: {{.RSSLink}}
 </p>
 
+{{with .Params.params.image}}
+<img src="{{$self.Permalink}}{{.}}">
+{{end}}
+
 <p>{{.Summary}}</p>
 <p>{{partial "content.html" . }}</p>
 
 {{ if .IsNode }}
-  {{$self := .}}
   {{with .Params.params.Photos}}
     {{$photos := . }}
     {{- $path := printf "content%s/%s" $self.RelPermalink $photos -}}
