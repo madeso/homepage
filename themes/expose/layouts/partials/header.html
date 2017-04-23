@@ -8,7 +8,8 @@
 
   <link rel="stylesheet" href="{{.Site.BaseURL}}css/reset.css" />
   <link rel="stylesheet" href="{{.Site.BaseURL}}css/style.css" />
-  <link rel="stylesheet" href="{{.Site.BaseURL}}external/fontawesome/css/font-awesome.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
   {{if eq .RelPermalink (printf "/%s/" .Section)}}
   {{ if .RSSLink }}
@@ -19,7 +20,7 @@
 
 </head>
 
-<body lang="en">
+<body lang="en" id="top">
 
 <div id="content">
 

@@ -1,5 +1,18 @@
 {{partial "social.html" . }}
 
 </div> <!-- content -->
+
+<!-- stolen from introduction theme -->
+<script>
+$('a[href^="{{ .Permalink }}#"]').click(function(e) {
+    e.preventDefault();
+    var target = this.hash;
+    $('html, body').animate({
+    scrollTop: $(target).offset().top
+    }, 500);
+    return false;
+})
+</script>
+
 </body>
 </html>
