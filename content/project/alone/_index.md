@@ -5,6 +5,7 @@ title = "Alone"
 
 [Params]
 image = "main.png"
+featured = true
 
 [Params.links]
 play = "alone"

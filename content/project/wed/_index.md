@@ -4,7 +4,7 @@ draft = false
 title = "World editor"
 
 [Params]
-featured = true
+
 
 [Params.links]
 windows = "https://github.com/madeso/infection-survivors/files/949999/wed.zip"

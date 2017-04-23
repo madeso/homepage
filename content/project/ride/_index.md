@@ -4,7 +4,6 @@ draft = false
 title = "Ride"
 
 [Params]
-featured = true
 Photos = "screens"
 
 [Params.links]
