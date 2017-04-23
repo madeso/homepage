@@ -8,6 +8,7 @@ image = "main.png"
 
 [Params.links]
 play = "guru"
+github = "https://github.com/madeso/gamesmadeinweekends/tree/master/nomoresweden_2011-guru"
 
 [[Params.links.youtube]]
 link="https://www.youtube.com/watch?v=wzuBLLVoBkk"
