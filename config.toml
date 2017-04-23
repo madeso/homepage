@@ -10,6 +10,7 @@ latestpostcount = 1
 latestdevlogcount = 3
 posts_navigation = true
 sharebuttons = true
+highlightjs = true
 
 [Params.social]
 Twitter = "sirGustav"
