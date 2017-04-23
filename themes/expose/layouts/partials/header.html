@@ -3,8 +3,32 @@
 
 <head>
   <meta charset="utf-8">
+  <!-- http://davidbcalhoun.com/2010/viewport-metatag/ -->
+  <!-- http://stackoverflow.com/questions/1988499/meta-tags-for-mobile-should-they-be-used -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+  {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta name="author" content="{{ .Site.Author.name }}"/>
+
+  <!-- twitter  -->
+  {{ if .Site.Params.twitter }}
+      <meta property="twitter:site" content="@{{.Site.Params.twitter}}">
+  {{ end }}
+  <meta property="twitter:title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}">
+  {{ if .Site.Params.social_banner }}
+      <meta property="twitter:card" content="summary_large_image">
+      <meta property="twitter:image" content="{{ if .Params.meta_img }}{{ .Site.BaseURL }}{{ .Params.meta_img }}{{ else }}{{ .Site.BaseURL }}{{.Site.Params.social_banner}}{{ end }}">
+  {{ else }}
+      <meta property="twitter:card" content="summary">
+  {{ end }}
+  <meta property="twitter:description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else if .IsPage }}{{ .Description }}{{ end }}">
+
+  {{ .Hugo.Generator -}}
+
+  <link rel="canonical" href="{{ .Permalink }}"> <!-- this should help search engines -->
   <title>{{ .Title }}</title>
-  <link rel="canonical" href="{{ .Permalink }}">
 
   <link rel="stylesheet" href="{{.Site.BaseURL}}css/reset.css" />
   <link rel="stylesheet" href="{{.Site.BaseURL}}css/style.css" />
@@ -19,8 +43,8 @@
   {{end}}
 
   {{ if .Site.Params.highlightjs }}
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
   {{ end }}
 
