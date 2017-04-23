@@ -7,7 +7,8 @@ title = "A scientific experiment"
 image = "main.png"
 
 [Params.links]
-windows = "windows"
+windows = "https://github.com/madeso/gamesmadeinweekends/files/949941/acientificexperiment.zip"
+github = "https://github.com/madeso/gamesmadeinweekends/tree/master/ludumdare_24-evolution"
 
 [[Params.links.youtube]]
 link="https://www.youtube.com/watch?v=X5Id4xHMjEU"

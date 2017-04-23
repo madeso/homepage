@@ -7,7 +7,8 @@ title = "Xplorer"
 image = "main.png"
 
 [Params.links]
-windows = "windows"
+windows = "https://github.com/madeso/gamesmadeinweekends/files/949940/xplorer.zip"
+github = "https://github.com/madeso/gamesmadeinweekends/tree/master/ludumdare_16"
 
 [[Params.links.youtube]]
 link="https://www.youtube.com/watch?v=HBZWmkZQjW0"

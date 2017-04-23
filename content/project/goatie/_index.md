@@ -8,7 +8,8 @@ image = "main.png"
 Photos = "screens"
 
 [Params.links]
-windows = "windows"
+windows = "https://github.com/madeso/gamesmadeinweekends/files/949943/goatie.zip"
+github = "https://github.com/madeso/gamesmadeinweekends/tree/master/ludumdare_25-youarethevillain"
 
 [[Params.links.youtube]]
 link="https://www.youtube.com/watch?v=nATcm7gMJRY"

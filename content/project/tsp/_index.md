@@ -7,7 +7,8 @@ title = "Traveling salesman problem"
 image = "main.png"
 
 [Params.links]
-windows = "windows"
+windows = "https://github.com/madeso/gamesmadeinweekends/files/949942/tsp.zip"
+github = "https://github.com/madeso/gamesmadeinweekends/tree/master/ludumdare_17"
 
 [[Params.links.youtube]]
 link="https://www.youtube.com/watch?v=gy3S0oGmKLo"

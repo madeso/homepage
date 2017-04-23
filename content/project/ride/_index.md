@@ -6,6 +6,9 @@ title = "Ride"
 [Params]
 featured = true
 Photos = "screens"
+
+[Params.links]
+github = "https://github.com/madeso/ride"
 +++
 
 A somewhat work in progress of my Rust IDE, currently written in C++.

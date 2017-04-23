@@ -7,7 +7,8 @@ title = "Let's go cave burrowing"
 image = "main.png"
 
 [Params.links]
-windows = "windows"
+windows = "https://github.com/madeso/gamesmadeinweekends/files/949930/lets-go-cave-burrowing1.zip"
+github = "https://github.com/madeso/gamesmadeinweekends/tree/master/ludumdare_15"
 
 [[Params.links.youtube]]
 link="https://www.youtube.com/watch?v=6PW8vkLySnE"

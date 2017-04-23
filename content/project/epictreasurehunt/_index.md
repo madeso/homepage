@@ -8,6 +8,7 @@ image = "main.png"
 
 [Params.links]
 play = "epictreasurehunt"
+github = "https://github.com/madeso/gamesmadeinweekends/tree/master/ludumdare_19"
 
 [[Params.links.youtube]]
 link="https://www.youtube.com/watch?v=tFW6P3XeYA4"

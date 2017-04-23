@@ -8,6 +8,7 @@ image = "main.png"
 
 [Params.links]
 play = "dudidadala"
+github = "https://github.com/madeso/gamesmadeinweekends/tree/master/ludumdare_18"
 +++
 
 Mario-esc jump and shoot kinda game.

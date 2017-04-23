@@ -8,6 +8,7 @@ image = "main.png"
 
 [Params.links]
 play = "aspawnnamedbob"
+github = "https://github.com/madeso/gamesmadeinweekends/tree/master/ludumdare_20"
 +++
 
 Pretty basic platformer made for ludum dare in 48 hours. Surprisingly fun because of the unlimited air dashing and matching sound effects.

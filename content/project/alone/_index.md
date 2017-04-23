@@ -8,6 +8,7 @@ image = "main.png"
 
 [Params.links]
 play = "alone"
+github = "https://github.com/madeso/gamesmadeinweekends/tree/master/ludumdare_22-alone"
 +++
 
 Basic 2d shooter that never ends. Becomes a little tactical since the different enemies require you to aim and a limmited amount of bullets force you to venture to the middle of the level.

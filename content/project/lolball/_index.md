@@ -10,7 +10,7 @@ Photos = "screens"
 
 [Params.links]
 github = "https://github.com/madeso/lolball"
-windows = "windows"
+windows = "https://github.com/madeso/lolball/files/949994/lolball.zip"
 
 [[Params.links.youtube]]
 link="https://www.youtube.com/watch?v=BjG1_d7Fxc8"

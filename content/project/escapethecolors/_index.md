@@ -7,7 +7,8 @@ title = "You can't escape the colors!"
 image = "main.png"
 
 [Params.links]
-windows = "windowslink"
+windows = "https://github.com/madeso/gamesmadeinweekends/files/949936/escape.zip"
+github = "https://github.com/madeso/gamesmadeinweekends/tree/master/ludumdare_21-escape"
 
 [[Params.links.youtube]]
 link="https://www.youtube.com/watch?v=9zOQYNZ4io0"

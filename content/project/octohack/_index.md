@@ -7,7 +7,7 @@ title = "Octohack"
 image = "main.png"
 
 [Params.links]
-windows = "windows"
+windows = "https://github.com/madeso/gamesmadeinweekends/files/949937/octohack.zip"
 +++
 
 As one of 2 programmers in a team of four we made a turn based octopus game where you kill your enemies by fighting them and detaching limbs for more attackpower.
