@@ -20,7 +20,7 @@ rss: {{.RSSLink}}
 {{end}}
 
 <p>{{.Summary}}</p>
-<p>{{partial "content.html" . }}</p>
+<div class="markdown">{{partial "content.html" . }}</div>
 
 {{ if .IsNode }}
   {{with .Params.params.Photos}}

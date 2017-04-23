@@ -14,3 +14,8 @@ div#content
 	margin:auto;
 	position: relative;
 }
+
+.markdown img
+{
+	max-width: 600px
+}
