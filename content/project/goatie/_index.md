@@ -2,7 +2,7 @@
 date = "2017-04-21T22:05:23+02:00"
 draft = false
 title = "The Furry Fours vs. Goatie the EVIL Goat"
-
+Photos = "screens"
 +++
 
 Play as a the evil goat and kill innocent small rabbits and kill the heroes.

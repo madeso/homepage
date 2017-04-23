@@ -5,7 +5,7 @@ title = "Lolball"
 
 [Params]
 featured = true
-
+Photos = "screens"
 +++
 
 Lolball is a simple guide-ball-to-the-end-of-the-level type of game with additional features such as particle combos(the explosions and the sprays), jumping, physics, slowmotion and crates.

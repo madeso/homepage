@@ -5,7 +5,7 @@ title = "Ride"
 
 [Params]
 featured = true
-
+Photos = "screens"
 +++
 
 A somewhat work in progress of my Rust IDE, currently written in C++.
