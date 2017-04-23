@@ -6,6 +6,9 @@ title = "Infection"
 [Params]
 image = "main.png"
 Photos = "screens"
+
+[Params.links]
+github = "https://github.com/madeso/infection"
 +++
 
 Infection is a unfinished FPS that I worked on between 2002-2004.

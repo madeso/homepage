@@ -2,9 +2,21 @@
 date = "2017-04-21T22:05:23+02:00"
 draft = false
 title = "The Furry Fours vs. Goatie the EVIL Goat"
+
 [Params]
 image = "main.png"
 Photos = "screens"
+
+[Params.links]
+windows = "windows"
+
+[[Params.links.youtube]]
+link="https://www.youtube.com/watch?v=nATcm7gMJRY"
+title="gameplay"
+
+[[Params.links.youtube]]
+link="https://www.youtube.com/watch?v=sL8qndG5H_U"
+title="timelapse"
 +++
 
 Play as a the evil goat and kill innocent small rabbits and kill the heroes.
