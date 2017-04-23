@@ -1,15 +1,25 @@
-{{$self := .}}
-
-{{ if eq .RelPermalink (printf "/%s/" .Section) }}
-{{ else }}
 <p>{{.Date.Format $.Site.Params.DateFormat}}</p>
 <a href="{{.Permalink}}"><h3>{{.Title}}</h3></a>
-{{ end }}
+
+{{$self := .}}
+
+<p>
+Rel: {{.RelRef}}
+Perma: {{.RelPermalink}}
+kind: {{.Kind}}
+node: {{.IsNode}}
+type: {{.Type}}
+section: {{.Section}}
+page: {{.IsPage}}
+trunc: {{.Truncated}}
+rss: {{.RSSLink}}
+</p>
 
 {{with .Params.params.image}}
 <img src="{{$self.Permalink}}{{.}}">
 {{end}}
 
+<p>{{.Summary}}</p>
 <div class="markdown">{{partial "content.html" . }}</div>
 
 {{ if .IsNode }}

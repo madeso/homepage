@@ -1,16 +1,18 @@
-{{$self := .}}
-
-{{ if eq .RelPermalink (printf "/%s/" .Section) }}
-{{ else }}
 <p>{{.Date.Format $.Site.Params.DateFormat}}</p>
 <a href="{{.Permalink}}"><h3>{{.Title}}</h3></a>
-{{ end }}
+
+{{$self := .}}
 
 {{with .Params.params.image}}
 <img src="{{$self.Permalink}}{{.}}">
 {{end}}
 
+{{if .Truncated }}
+<p>{{.Summary}}</p>
+<p><a href="{{.Permalink}}">Read the rest...</a></p>
+{{else}}
 <div class="markdown">{{partial "content.html" . }}</div>
+{{end}}
 
 {{ if .IsNode }}
   {{with .Params.params.Photos}}
@@ -28,6 +30,5 @@
 {{ end }}
 
 {{partial "taglist.html" . }}
-{{partial "project-links.html" . }}
 
 <hr>

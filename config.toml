@@ -6,7 +6,7 @@ theme = "expose"
 
 [Params]
 DateFormat = "Monday, Jan 2, 2006 at 15:04"
-latestpostcount = 1
+latestpostcount = 3
 latestdevlogcount = 3
 posts_navigation = true
 sharebuttons = true
