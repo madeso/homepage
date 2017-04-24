@@ -1,9 +1,14 @@
 {{$self := .}}
 
+<div class="post">
+
 {{ if eq .RelPermalink (printf "/%s/" .Section) }}
+<h1 class="title">{{.Title}} {{if eq .RelPermalink (printf "/%s/" .Section)}}
+<a href="{{.RSSLink}}" type="application/rss+xml"><i class="fa fa-rss"></i></a>
+{{end}}</h1>
 {{ else }}
+<a href="{{.Permalink}}"><h1 class="title">{{.Title}}</h1></a>
 <p>{{.Date.Format $.Site.Params.DateFormat}}</p>
-<a href="{{.Permalink}}"><h3>{{.Title}}</h3></a>
 {{ end }}
 
 {{with .Params.params.image}}
@@ -24,10 +29,11 @@
               <img src="{{$imgurl}}" height="50" width="50">
               </a>
         {{- end }}
+    </div>
   {{ end }}
 {{ end }}
 
-{{partial "taglist.html" . }}
 {{partial "project-links.html" . }}
+{{partial "taglist.html" . }}
 
-<hr>
+</div>

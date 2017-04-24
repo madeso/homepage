@@ -1,22 +1,16 @@
 {{ partial "header.html" . }}
 
-{{if eq .RelPermalink (printf "/%s/" .Section)}}
-<a href="{{.RSSLink}}" type="application/rss+xml"><i class="fa fa-rss"></i></a>
-{{end}}
-
 {{partial "fullpost.html" . }}
 {{$self := . }}
 
 <!-- This if excludes sub sections from displaying other neighbouring sections in the same root section -->
 {{ if eq .RelPermalink (printf "/%s/" .Section) }}
 
-<h1>List</h1>
 {{$section := .Section }}
 {{ range $i, $p := .Site.Pages }}
 {{ if eq .Section $section }} <!-- only display pages matching our current section -->
 {{ if not (eq .RelPermalink (printf "/%s/" $section)) }} <!-- but dont display the _index page -->
 {{partial "post-preview.html" . }}
-{{partial "project-links.html" . }}
 {{partial "to-top.html" $self }}
 {{ end }}
 {{ end }}

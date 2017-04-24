@@ -1,5 +1,7 @@
-<p>{{.Date.Format $.Site.Params.DateFormat}}</p>
-<a href="{{.Permalink}}"><h3>{{.Title}}</h3></a>
+<div class="post">
+
+<a href="{{.Permalink}}"><h2 class="preview">{{.Title}}</h2></a>
+<div class="date">{{ .Date.Format $.Site.Params.DateFormat }}</div>
 
 {{$self := .}}
 
@@ -26,9 +28,11 @@
               <img src="{{$imgurl}}" height="50" width="50">
               </a>
         {{- end }}
+    </div>
   {{ end }}
 {{ end }}
 
+{{partial "project-links.html" . }}
 {{partial "taglist.html" . }}
 
-<hr>
+</div>
