@@ -6,7 +6,7 @@
 {{$self := .}}
 
 {{with .Params.params.image}}
-<img src="{{$self.Permalink}}{{.}}">
+<img class="postimage" src="{{$self.Permalink}}{{.}}">
 {{end}}
 
 {{if .Truncated }}
@@ -25,7 +25,7 @@
         {{- range $files }}
               {{$imgurl := (printf "%s%s/%s" $self.Permalink $photos .Name ) }}
               <a href="{{$imgurl}}" data-lightbox="{{$self.Title}}" >
-              <img src="{{$imgurl}}" height="50" width="50">
+              <img class="screenshot" src="{{$imgurl}}" height="50" width="50">
               </a>
         {{- end }}
     </div>

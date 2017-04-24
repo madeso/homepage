@@ -1,9 +1,9 @@
 {{ if .Params.tags }}
-  <span class="post-meta">
+  <div class="taglist">
   {{ range .Params.tags }}
-    &nbsp;<a href="{{ $.Site.LanguagePrefix }}/tags/{{ . | urlize }}">#{{ . }}</a>
+    &nbsp;<a class="tag" href="{{ $.Site.LanguagePrefix }}/tags/{{ . | urlize }}">#{{ . }}</a>
   {{ end }}
 
-  or <a href="{{ $.Site.LanguagePrefix }}/tags/">(all)</a>
-  </span>
+  or <a class="tag" href="{{ $.Site.LanguagePrefix }}/tags/">(all)</a>
+  </div>
 {{ end }}

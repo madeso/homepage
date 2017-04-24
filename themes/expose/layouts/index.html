@@ -2,6 +2,7 @@
 
 <div class="markdown">{{partial "content.html" . }}</div>
 
+<div id="featuredprojects" class="featured">
 <h2>Featured projects</h2>
 {{ range $i, $p := .Site.Pages }}
 {{ if eq .Type "project" }}
@@ -15,7 +16,9 @@
 {{ end }}
 {{ end }}
 {{ end }}
+</div>
 
+<div id="latestdevlog" class="featured">
 <h2>Latest devlog</h2>
 {{ if isset .Site.Params "latestdevlogcount" }}
     <div class="posts">
@@ -39,7 +42,9 @@
     {{ end }}
     </div>
 {{ end }}
+</div>
 
+<div id="latestblog" class="featured">
 <h2>Latest blog</h2>
 {{ if isset .Site.Params "latestpostcount" }}
     <div class="posts">
@@ -63,7 +68,7 @@
     {{ end }}
     </div>
 {{ end }}
-
+</div>
 
 
 {{ partial "footer.html" . }}
