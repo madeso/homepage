@@ -75,13 +75,38 @@ img, .screenshots img.screenshot
 	display: inline-block;
 }
 
+#header {
+	display: block;
+	padding-bottom: 30px;
+}
+
+#header h1 {
+	font-size: 2em;
+	display: inline-block;
+}
+
+#header #toplinks {
+	display: block;
+}
+
+#header #mainlogo {
+	padding: 6px;
+	display: inline-block;
+}
+
+pre code {
+	font-family: 'Source Code Pro', monospace;
+}
+
+
+
 
 
 
 /* terminal design by http://codepen.io/simoami/pen/zstvo */
 .terminal-window {
   text-align: left;
-  border-radius: 10px;
+  border-radius: 0px;
 	padding: 6px;
 }
 
@@ -90,6 +115,8 @@ img, .screenshots img.screenshot
   height: 30px;
   border-radius: 8px 8px 0 0;
   padding-left: 10px;
+	border: 1px solid #AAA;
+	border-bottom: 0;
 }
 
 .terminal-window header .button {
@@ -145,23 +172,4 @@ img, .screenshots img.screenshot
 	border: 0;
 	padding: 0;
 	margin: 0;
-}
-
-#header {
-	display: block;
-	padding-bottom: 30px;
-}
-
-#header h1 {
-	font-size: 2em;
-	display: inline-block;
-}
-
-#header #toplinks {
-	display: block;
-}
-
-#header #mainlogo {
-	padding: 6px;
-	display: inline-block;
 }
