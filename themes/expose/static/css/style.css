@@ -3,6 +3,13 @@
 	margin: 0;
 }
 
+body {
+	line-height: 1.75em;
+  color: #313537;
+  font-family: 'Merriweather Sans', sans-serif;
+	font-weight: 300;
+}
+
 a:link, a:visited
 {
 	text-decoration: none;
