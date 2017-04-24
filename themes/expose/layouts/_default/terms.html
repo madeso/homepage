@@ -2,17 +2,16 @@
 
 <h1>Terms</h1>
 
-<section id="main">
-  <div>
-    <h2 id="title">{{ .Title }}</h2>
 
-    <ul>
-    {{ $data := .Data }}
-    {{ range $key, $value := .Data.Terms }}
-      <li><a href="{{ $.Site.LanguagePrefix }}/{{ $data.Plural }}/{{ $key | urlize }}">{{ $key }}</a> {{ len $value }}</li>
-    {{ end }}
-   </ul>
-  </div>
-</section>
+<div>
+  <h2 id="title">{{ .Title }}</h2>
+
+  <ul>
+  {{ $data := .Data }}
+  {{ range $key, $value := .Data.Terms }}
+    <li><a href="{{ $.Site.LanguagePrefix }}/{{ $data.Plural }}/{{ $key | urlize }}">{{ $key }}</a> {{ len $value }}</li>
+  {{ end }}
+ </ul>
+</div>
 
 {{ partial "footer.html" . }}

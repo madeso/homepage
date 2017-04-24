@@ -6,4 +6,7 @@
 {{ $newImage2 := (print "<a href=\"$1\" data-lightbox=\"blog-" .Title "\"><img src=\"$1\" alt=$3 $4></a>") }}
 {{ $c3 := $c2 | replaceRE "<img src=\"([^\"]+)\" alt=(.*) (.*)>" $newImage2 }}
 
-{{ $c3 | safeHTML }}
+{{ $newCode := "<div class=\"terminal-window\"><header><div class=\"button green\"></div><div class=\"button yellow\"></div><div class=\"button red\"></div></header><dection>$1</section></div>" }}
+{{ $c4 := $c3 | replaceRE "(<pre><code class=\"language-shell\">[^<]+</code></pre>)" $newCode }}
+
+{{ $c4 | safeHTML}}

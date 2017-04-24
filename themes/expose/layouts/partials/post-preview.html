@@ -24,8 +24,8 @@
     <div class="screenshots">
         {{- range $files }}
               {{$imgurl := (printf "%s%s/%s" $self.Permalink $photos .Name ) }}
-              <a href="{{$imgurl}}" data-lightbox="{{$self.Title}}" >
               <img class="screenshot" src="{{$imgurl}}" height="50" width="50">
+              <a href="{{$imgurl}}" data-lightbox="{{$self.Title}}" >
               </a>
         {{- end }}
     </div>
