@@ -28,3 +28,7 @@ git push origin master
 
 # Come Back
 cd ..
+
+# Add and commit submodule
+git add -A
+git commit -m "$msg"
