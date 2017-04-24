@@ -58,37 +58,35 @@
 
 <div id="content">
 
-<img src="{{.Site.BaseURL}}logo.png">
+<div id="header">
+  <img id="mainlogo" src="{{.Site.BaseURL}}logo.png">
 
-<h1>{{ .Site.Title }}</h1>
-<p>
-<!-- Home link -->
-{{ range $i, $p := .Site.Pages }}
-{{ if eq $p.Kind "home" }}
-{{partial "headerlink.html" .}}
-{{ end }}
-{{ end }}
+  <h1>{{ .Site.Title }}</h1>
+  <div id="toplinks">
+    <!-- Home link -->
+    {{ range $i, $p := .Site.Pages }}
+    {{ if eq $p.Kind "home" }}
+    {{partial "headerlink.html" .}}
+    {{ end }}
+    {{ end }}
 
-<!-- each section root -->
-{{ range $i, $p := .Site.Pages }}
-{{ if eq $p.Kind "section" }}
-<!-- hack to only get the root sections, and not the sub sections -->
-{{ if eq $p.RelPermalink (printf "/%s/" $p.Section) }}
-{{partial "headerlink.html" .}}
-{{ end }}
-{{ end }}
-{{ end }}
+    <!-- each section root -->
+    {{ range $i, $p := .Site.Pages }}
+    {{ if eq $p.Kind "section" }}
+    <!-- hack to only get the root sections, and not the sub sections -->
+    {{ if eq $p.RelPermalink (printf "/%s/" $p.Section) }}
+    {{partial "headerlink.html" .}}
+    {{ end }}
+    {{ end }}
+    {{ end }}
 
-<!-- Each root page -->
-{{ range $i, $p := .Site.Pages }}
-{{ if eq $p.Kind "page" }}
-{{ if eq $p.Section "" }}
-{{partial "headerlink.html" .}}
-{{ end }}
-{{ end }}
-{{ end }}
-
-</p>
-
-<hr>
-<hr>
+    <!-- Each root page -->
+    {{ range $i, $p := .Site.Pages }}
+    {{ if eq $p.Kind "page" }}
+    {{ if eq $p.Section "" }}
+    {{partial "headerlink.html" .}}
+    {{ end }}
+    {{ end }}
+    {{ end }}
+  </div>
+</div>

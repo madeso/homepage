@@ -19,6 +19,8 @@ div#content
 	margin:auto;
 	position: relative;
 	display: block;
+	padding-top: 30px;
+	padding-bottom: 90px;
 }
 
 img, .screenshots img.screenshot
@@ -49,11 +51,17 @@ img, .screenshots img.screenshot
 	margin-bottom: 12px;
 }
 
-.to-top {
-	margin-left: auto;
-  margin-right: auto;
-	display: block;
-	width: 6em
+.to-top, .socialbuttons {
+	text-align: center;
+}
+
+.socialbuttons {
+	padding-top: 60px;
+	font-size: 1.2em;
+}
+
+.socialbuttons a {
+	padding-right: 6px;
 }
 
 .featured {
@@ -130,4 +138,23 @@ img, .screenshots img.screenshot
 	border: 0;
 	padding: 0;
 	margin: 0;
+}
+
+#header {
+	display: block;
+	padding-bottom: 30px;
+}
+
+#header h1 {
+	font-size: 2em;
+	display: inline-block;
+}
+
+#header #toplinks {
+	display: block;
+}
+
+#header #mainlogo {
+	padding: 6px;
+	display: inline-block;
 }
