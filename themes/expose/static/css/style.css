@@ -40,6 +40,17 @@ img, .screenshots img.screenshot
 	vertical-align: middle;
 }
 
+#featuredprojects img
+{
+	max-width: 30%;
+	margin: 0;
+	padding: 0;
+	display: inline;
+	float: left;
+	vertical-align: middle;
+	padding-left: 1px;
+}
+
 .screenshots img.screenshot {
 	padding: 3px;
 }
