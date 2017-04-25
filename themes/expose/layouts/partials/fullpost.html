@@ -36,4 +36,8 @@
 {{partial "project-links.html" . }}
 {{partial "taglist.html" . }}
 
+{{ if not (eq .RelPermalink (printf "/%s/" .Section)) }}
+{{ partial "post-share.html" . }}
+{{ end }}
+
 </div>

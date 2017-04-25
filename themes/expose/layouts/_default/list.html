@@ -5,7 +5,6 @@
 
 <!-- This if excludes sub sections from displaying other neighbouring sections in the same root section -->
 {{ if eq .RelPermalink (printf "/%s/" .Section) }}
-
 {{$section := .Section }}
 {{ range $i, $p := .Site.Pages }}
 {{ if eq .Section $section }} <!-- only display pages matching our current section -->
@@ -15,7 +14,8 @@
 {{ end }}
 {{ end }}
 {{ end }}
-
+{{ else }}
+{{ partial "post-navigation.html" . }}
 {{ end }}
 
 {{ partial "footer.html" . }}
