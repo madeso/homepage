@@ -5,7 +5,8 @@ theme = "expose"
 # disqusshortname = "madesopage"
 
 [Params]
-DateFormat = "Monday, Jan 2, 2006 at 15:04"
+LongDateFormat = "Monday, 2 January 2006 at 15:04"
+ShortDateFormat = "2 January 2006"
 latestpostcount = 3
 latestdevlogcount = 3
 posts_navigation = true

@@ -1,7 +1,9 @@
 <div class="post">
 
-<a href="{{.Permalink}}"><h2 class="preview">{{.Title}}</h2></a>
-<div class="date">{{ .Date.Format $.Site.Params.DateFormat }}</div>
+<div class="title">
+<a href="{{.Permalink}}"><div class="previewheader header">{{.Title}}</div></a>
+<div class="shortdate right">{{ .Date.Format $.Site.Params.ShortDateFormat }}</div>
+</div>
 
 {{$self := .}}
 
