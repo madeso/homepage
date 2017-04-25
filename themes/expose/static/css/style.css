@@ -172,10 +172,18 @@ a:hover .hidden {
 }
 
 a:hover img.screenshot {
-	-ms-transform: scale(1.1, 1.1); /* IE 9 */
-  -webkit-transform: scale(2.0, 2.0); /* Safari */
+	-ms-transform: scale(1.2, 1.2); /* IE 9 */
+  -webkit-transform: scale(1.2, 1.2); /* Safari */
   transform: scale(1.2, 1.2);
 }
+
+.title a:hover .fa {
+	-ms-transform: scale(2.0, 2.0); /* IE 9 */
+  -webkit-transform: scale(2.0, 2.0); /* Safari */
+  transform: scale(2.0, 2.0);
+}
+
+
 
 
 /* terminal design by http://codepen.io/simoami/pen/zstvo */
