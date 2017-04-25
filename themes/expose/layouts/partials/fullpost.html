@@ -3,12 +3,16 @@
 <div class="post">
 
 {{ if eq .RelPermalink (printf "/%s/" .Section) }}
-<h1 class="title">{{.Title}} {{if eq .RelPermalink (printf "/%s/" .Section)}}
-<a href="{{.RSSLink}}" type="application/rss+xml"><i class="fa fa-rss"></i></a>
-{{end}}</h1>
+  <div class="title">
+  <div class="header">{{.Title}}</div>
+  {{if eq .RelPermalink (printf "/%s/" .Section)}}
+    <a href="{{.RSSLink}}" type="application/rss+xml"><i class="fa fa-rss"></i></a>
+  {{end}}
+  </div>
+  <div class="clear"></div>
 {{ else }}
-<a href="{{.Permalink}}"><h1 class="title">{{.Title}}</h1></a>
-<p>{{.Date.Format $.Site.Params.DateFormat}}</p>
+  <a href="{{.Permalink}}"><h1>{{.Title}}</h1></a>
+  <p>{{.Date.Format $.Site.Params.DateFormat}}</p>
 {{ end }}
 
 {{with .Params.params.image}}
