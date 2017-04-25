@@ -3,7 +3,8 @@
 <div class="markdown">{{partial "content.html" . }}</div>
 
 <div id="featuredprojects" class="featured">
-<h2>Featured projects</h2>
+<h2 class="latestpostsheader">Featured projects</h2>
+<div class="featuedimages">
 {{ range $i, $p := .Site.Pages }}
 {{ if eq .Type "project" }}
 {{ if not (eq .RelPermalink "/project/") }}
@@ -17,15 +18,15 @@
 {{ end }}
 {{ end }}
 </div>
+</div>
 
-<div id="latestdevlog" class="featured">
 {{ if isset .Site.Params "latestdevlogcount" }}
-    <div class="latestposts">
+    <div id="latestdevlog" class="featured">
     {{ $all_posts := where .Site.Pages "Section" "devlog" }}
     {{ $posts := where $all_posts "RelPermalink" "!=" "/devlog/" }}
     {{ $postcount := len $posts }}
     {{ if gt $postcount 0 }}
-        <h2>Latest devlogs</h2>
+        <h2 class="latestpostsheader">Latest devlogs</h2>
         {{ range (first .Site.Params.latestdevlogcount $posts)}}
             {{ partial "post-preview.html" . }}
         {{ end }}
@@ -36,16 +37,15 @@
     {{ end }}
     </div>
 {{ end }}
-</div>
 
-<div id="latestblog" class="featured">
+
 {{ if isset .Site.Params "latestpostcount" }}
-    <div class="latestposts">
+    <div id="latestblog" class="featured">
     {{ $all_posts := where .Site.Pages "Section" "blog" }}
     {{ $posts := where $all_posts "RelPermalink" "!=" "/blog/" }}
     {{ $postcount := len $posts }}
     {{ if gt $postcount 0 }}
-        <h2>Latest blog posts</h2>
+        <h2 class="latestpostsheader">Latest blog posts</h2>
         {{ range (first .Site.Params.latestpostcount $posts)}}
             {{ partial "post-preview.html" . }}
         {{ end }}
@@ -56,7 +56,6 @@
     {{ end }}
     </div>
 {{ end }}
-</div>
 
 
 {{ partial "footer.html" . }}
