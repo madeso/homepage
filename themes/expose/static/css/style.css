@@ -114,6 +114,13 @@ pre code {
 }
 
 
+.hidden {
+	display: none;
+}
+
+a:hover .hidden {
+	display: inline;
+}
 
 
 
