@@ -2,7 +2,7 @@
 
 <div class="post">
 
-{{ if eq .RelPermalink (printf "/%s/" .Section) }}
+{{ if or (eq .Section "") (eq .RelPermalink (printf "/%s/" .Section)) }}
   <div class="title">
   <div class="header">{{.Title}}</div>
   {{if eq .RelPermalink (printf "/%s/" .Section)}}
