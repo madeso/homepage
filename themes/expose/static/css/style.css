@@ -83,7 +83,15 @@ img, .screenshots img.screenshot
 }
 
 .socialbuttons a {
-	padding-right: 6px;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	font-size: 1em;
+}
+
+.socialbuttons a:hover .fa {
+	-ms-transform: scale(2.3, 2.3); /* IE 9 */
+  -webkit-transform: scale(2.3, 2.3); /* Safari */
+  transform: scale(2.3, 2.3);
 }
 
 .featured {
@@ -122,16 +130,19 @@ a:hover .hidden {
 	display: inline;
 }
 
-.projectlinks a .fa {
-	margin: 0;
-	padding: .3em;
-	font-size: 1em;
+.projectlinks a {
+	padding-right: 0.6em;
 	vertical-align: middle;
 }
+
+.projectlinks .fa {
+	padding-right: 0.3em;
+}
+
 .projectlinks a:hover .fa {
-	padding: 0;
-	font-size: 1.55em;
-	vertical-align: middle;
+	-ms-transform: scale(2.0, 2.0); /* IE 9 */
+  -webkit-transform: scale(2.0, 2.0); /* Safari */
+  transform: scale(2.0, 2.0);
 }
 
 #toplinks {
@@ -160,7 +171,11 @@ a:hover .hidden {
 	clear: both;
 }
 
-
+a:hover img.screenshot {
+	-ms-transform: scale(1.1, 1.1); /* IE 9 */
+  -webkit-transform: scale(2.0, 2.0); /* Safari */
+  transform: scale(1.2, 1.2);
+}
 
 
 /* terminal design by http://codepen.io/simoami/pen/zstvo */
