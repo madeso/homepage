@@ -19,22 +19,16 @@
 </div>
 
 <div id="latestdevlog" class="featured">
-<h2>Latest devlog</h2>
 {{ if isset .Site.Params "latestdevlogcount" }}
-    <div class="posts">
+    <div class="latestposts">
     {{ $all_posts := where .Site.Pages "Section" "devlog" }}
     {{ $posts := where $all_posts "RelPermalink" "!=" "/devlog/" }}
     {{ $postcount := len $posts }}
     {{ if gt $postcount 0 }}
-        <div class="page-heading">Latest posts</div>
-        <ul>
-        {{ range (first .Site.Params.latestdevlogcount $posts).GroupByDate "Jan, 2006" "desc" }}
-            <li class="groupby">{{ .Key }}</li>
-            {{ range .Pages.ByPublishDate }}
-                {{ partial "post-preview.html" . }}
-            {{ end }}
+        <h2>Latest devlogs</h2>
+        {{ range (first .Site.Params.latestdevlogcount $posts)}}
+            {{ partial "post-preview.html" . }}
         {{ end }}
-        </ul>
 
         {{ if gt $postcount .Site.Params.latestdevlogcount }}
             <a href="./devlog/" class="see-more">See more ...</a>
@@ -45,22 +39,16 @@
 </div>
 
 <div id="latestblog" class="featured">
-<h2>Latest blog</h2>
 {{ if isset .Site.Params "latestpostcount" }}
-    <div class="posts">
+    <div class="latestposts">
     {{ $all_posts := where .Site.Pages "Section" "blog" }}
     {{ $posts := where $all_posts "RelPermalink" "!=" "/blog/" }}
     {{ $postcount := len $posts }}
     {{ if gt $postcount 0 }}
-        <div class="page-heading">Latest posts</div>
-        <ul>
-        {{ range (first .Site.Params.latestpostcount $posts).GroupByDate "Jan, 2006" "desc" }}
-            <li class="groupby">{{ .Key }}</li>
-            {{ range .Pages.ByPublishDate }}
-                {{ partial "post-preview.html" . }}
-            {{ end }}
+        <h2>Latest blog posts</h2>
+        {{ range (first .Site.Params.latestpostcount $posts)}}
+            {{ partial "post-preview.html" . }}
         {{ end }}
-        </ul>
 
         {{ if gt $postcount .Site.Params.latestpostcount }}
             <a href="./blog/" class="see-more">See more ...</a>
