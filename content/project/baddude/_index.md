@@ -9,4 +9,5 @@ image = "main.png"
 
 [Params.links]
 github = "https://github.com/madeso/nomoresweden2014"
+windows = "http://www.unicorn7.org/media/games/game.jar"
 +++

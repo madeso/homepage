@@ -9,4 +9,7 @@ categories = ["games", "ngj", "in 48 hours"]
 
 [Params.links]
 github = "https://github.com/madeso/nordicgamejam15"
+windows = "https://madeso.itch.io/roomy"
+
 +++
+Get ouside the room. The most obvious is to use the key, but will that get you out?
