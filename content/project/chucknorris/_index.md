@@ -1,5 +1,5 @@
 +++
-date = "2017-04-21T22:25:42+02:00"
+date = "2010-08-21T22:25:42+02:00"
 draft = false
 title = "Chuck Norris The Demolition Dude"
 categories = ["games", "no more sweden", "in 48 hours"]

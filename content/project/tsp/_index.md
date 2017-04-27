@@ -1,5 +1,5 @@
 +++
-date = "2017-04-21T22:05:56+02:00"
+date = "2010-04-11T22:05:56+02:00"
 draft = false
 title = "Traveling salesman problem"
 categories = ["games", "ludumdare", "in 48 hours"]

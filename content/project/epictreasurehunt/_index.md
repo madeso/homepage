@@ -1,5 +1,5 @@
 +++
-date = "2017-04-21T22:04:16+02:00"
+date = "2010-12-21T22:04:16+02:00"
 draft = false
 title = "Epic Treasure Hunt"
 categories = ["games", "ludumdare", "in 48 hours"]

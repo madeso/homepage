@@ -1,5 +1,5 @@
 +++
-date = "2017-04-21T22:04:21+02:00"
+date = "2011-08-07T22:04:21+02:00"
 draft = false
 title = "Guru: the meaning of life"
 categories = ["games", "no more sweden", "in 48 hours"]
