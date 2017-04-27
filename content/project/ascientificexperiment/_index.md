@@ -2,6 +2,7 @@
 date = "2017-04-21T22:04:50+02:00"
 draft = false
 title = "A scientific experiment"
+categories = ["games", "ludumdare"]
 
 [Params]
 image = "main.png"

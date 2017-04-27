@@ -2,6 +2,7 @@
 date = "2017-04-21T22:03:05+02:00"
 draft = false
 title = "A spawn named bob"
+categories = ["games", "ludumdare"]
 
 [Params]
 image = "main.png"

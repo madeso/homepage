@@ -2,6 +2,7 @@
 date = "2017-04-21T22:03:32+02:00"
 draft = false
 title = "Infection"
+categories = ["games", "free time"]
 
 [Params]
 featured = true
