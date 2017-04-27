@@ -111,6 +111,11 @@ h2.latestpostsheader {
 	font-size: 1em;
 }
 
+.socialbuttons a .fa {
+	-webkit-transition: -webkit-transform .1s ease-out;
+          transition:         transform .1s ease-out;
+}
+
 .socialbuttons a:hover .fa {
 	-ms-transform: scale(2.3, 2.3); /* IE 9 */
   -webkit-transform: scale(2.3, 2.3); /* Safari */
@@ -162,6 +167,12 @@ a:hover .hidden {
 	padding-right: 0.3em;
 }
 
+
+.projectlinks a .fa {
+	-webkit-transition: -webkit-transform .1s ease-out;
+          transition:         transform .1s ease-out;
+}
+
 .projectlinks a:hover .fa {
 	-ms-transform: scale(2.0, 2.0); /* IE 9 */
   -webkit-transform: scale(2.0, 2.0); /* Safari */
@@ -206,10 +217,20 @@ a:hover .hidden {
 	font-size: .5em;
 }
 
+a img.screenshot {
+	-webkit-transition: -webkit-transform .1s ease-out;
+					transition:         transform .1s ease-out;
+}
+
 a:hover img.screenshot {
 	-ms-transform: scale(1.2, 1.2); /* IE 9 */
   -webkit-transform: scale(1.2, 1.2); /* Safari */
   transform: scale(1.2, 1.2);
+}
+
+.title a .fa {
+	-webkit-transition: -webkit-transform .2s ease-out;
+					transition:         transform .2s ease-out;
 }
 
 .title a:hover .fa {
