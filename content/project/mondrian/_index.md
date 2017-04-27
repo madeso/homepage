@@ -1,7 +1,7 @@
 +++
 date = "2017-04-23T22:41:52+02:00"
 title = "The Mondrian crash"
-categories = ["games", "ludumdare"]
+categories = ["games", "ludumdare", "in 48 hours"]
 
 [Params]
 image = "main.png"

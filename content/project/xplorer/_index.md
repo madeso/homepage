@@ -2,7 +2,7 @@
 date = "2017-04-21T22:06:06+02:00"
 draft = false
 title = "Xplorer"
-categories = ["games", "ludumdare"]
+categories = ["games", "ludumdare", "in 48 hours"]
 
 [Params]
 image = "main.png"

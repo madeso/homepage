@@ -2,7 +2,7 @@
 date = "2017-04-21T22:05:23+02:00"
 draft = false
 title = "The Furry Fours vs. Goatie the EVIL Goat"
-categories = ["games", "ludumdare"]
+categories = ["games", "ludumdare", "in 48 hours"]
 
 [Params]
 image = "main.png"

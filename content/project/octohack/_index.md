@@ -2,7 +2,7 @@
 date = "2017-04-21T22:05:44+02:00"
 draft = false
 title = "Octohack"
-categories = ["games", "no more sweden"]
+categories = ["games", "no more sweden", "in 48 hours"]
 
 [Params]
 image = "main.png"
