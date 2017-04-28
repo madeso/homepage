@@ -6,6 +6,7 @@ categories = ["games", "shayla", "in 48 hours"]
 
 [Params]
 image = "main.png"
+featuredimage = "main.png"
 Photos = "screens"
 
 [Params.links]

@@ -6,7 +6,7 @@ categories = ["games", "ludumdare", "in 48 hours"]
 
 [Params]
 image = "main.png"
-featured = true
+featuredimage = "main.png"
 
 [Params.links]
 play = "alone"

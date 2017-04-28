@@ -46,7 +46,8 @@ img, .screenshots img.screenshot
 
 #featuredprojects img
 {
-	max-width: 32%;
+	/* image size should be 250 * 180  */
+	width: 32%;
 	margin: 0;
 	padding: 0;
 	display: inline;

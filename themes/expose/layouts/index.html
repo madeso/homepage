@@ -10,12 +10,10 @@
 {{ range $i, $p := .Site.Pages }}
 {{ if eq .Type "project" }}
 {{ if not (eq .RelPermalink "/project/") }}
-{{ if .Params.params.featured }}
 {{$self := .}}
-{{with .Params.params.image}}
+{{with .Params.params.featuredimage}}
 <a href="{{$self.Permalink}}"><img src="{{$self.Permalink}}{{.}}"></a>
 {{end}}
-{{ end }}
 {{ end }}
 {{ end }}
 {{ end }}

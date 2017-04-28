@@ -6,7 +6,7 @@ categories = ["games", "free time"]
 
 [Params]
 image = "main.png"
-featured = true
+featuredimage = "main.png"
 Photos = "screens"
 
 [Params.links]
