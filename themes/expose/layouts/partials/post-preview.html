@@ -8,7 +8,9 @@
 {{$self := .}}
 
 {{with .Params.params.image}}
-<img class="postimage" src="{{$self.Permalink}}{{.}}">
+<div class="bigimage">
+<img class="bigimage" src="{{$self.Permalink}}{{.}}">
+</div>
 {{end}}
 
 {{if .Truncated }}

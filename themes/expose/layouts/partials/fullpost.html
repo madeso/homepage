@@ -16,7 +16,9 @@
 {{ end }}
 
 {{with .Params.params.image}}
-<img src="{{$self.Permalink}}{{.}}">
+<div class="bigimage">
+<img class="bigimage" src="{{$self.Permalink}}{{.}}">
+</div>
 {{end}}
 
 <div class="markdown">{{partial "content.html" . }}</div>
