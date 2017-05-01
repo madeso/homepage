@@ -6,7 +6,7 @@ categories = ["games", "no more sweden", "in 48 hours"]
 
 [Params]
 image = "main.png"
-featuredimage = "main.png"
+featuredimage = "featured.png"
 Photos = "screens"
 
 [Params.links]
