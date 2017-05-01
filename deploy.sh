@@ -11,6 +11,8 @@ fi
 # Build the project.
 hugo # if using a theme, replace by `hugo -t <yourtheme>`
 
+find public -type f -name "*.html" -exec tidy -f errors.txt -m -utf8 -i {} \;
+
 # Go To Public folder
 cd public
 # Add changes to git.
