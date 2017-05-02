@@ -7,4 +7,5 @@ main.png image:
 
 featured image:
 250 x 188 px
+450 x 338 px
 500 x 376 px
