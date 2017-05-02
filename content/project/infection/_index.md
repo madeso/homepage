@@ -5,8 +5,8 @@ title = "Infection"
 categories = ["games", "free time"]
 
 [Params]
-featuredimage = "main.png"
 image = "main.png"
+featuredimage = "featured.png"
 Photos = "screens"
 
 [Params.links]
