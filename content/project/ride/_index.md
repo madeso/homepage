@@ -5,6 +5,7 @@ title = "Ride"
 categories = ["apps", "free time"]
 
 [Params]
+image = "main.png"
 Photos = "screens"
 
 [Params.links]
