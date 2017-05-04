@@ -6,6 +6,7 @@ categories = ["games", "ludumdare", "in 48 hours"]
 
 [Params]
 image = "main.jpg"
+Photos = "screens"
 
 [Params.links]
 github = "https://github.com/hubbas/Ludum-Dare-2014"
