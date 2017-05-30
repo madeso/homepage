@@ -3,6 +3,7 @@ import os
 import subprocess
 import re
 import datetime
+from PIL import Image
 
 d = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 gitmessage = 'Rebuilding site {0}'.format(d)
@@ -36,6 +37,25 @@ def call(args, cwd):
     p = subprocess.Popen(args, cwd=cwd, universal_newlines=True, stderr=subprocess.PIPE, stdout=subprocess.PIPE)
     p.wait()
     return p.stdout.read()
+
+print('Generating images')
+def generate_progressive(root, ext):
+    size = (15, 15)
+    imgs = filesin(root, ext)
+    for path in imgs:
+        f,e = os.path.splitext(path)
+        newpath = '{0}_progressive{1}'.format(f,e)
+        if os.path.exists(newpath):
+            pass
+        elif f.endswith('_progressive'):
+            pass
+        else:
+            img = Image.open(path)
+            img = img.resize(size)
+            img.save(newpath)
+
+# generate_progressive(content, '.png')
+# generate_progressive(content, '.jpg')
 
 print('Deploying updates to GitHub...')
 
