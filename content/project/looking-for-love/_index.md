@@ -8,6 +8,7 @@ image = "main.png"
 Photos = "screens"
 
 [Params.links]
+play = "lookingforlove"
 github = "https://github.com/madeso/nms17-catlove"
 +++
 

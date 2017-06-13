@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "lookingforlove.data.unityweb",
+"asmCodeUrl": "lookingforlove.asm.code.unityweb",
+"asmMemoryUrl": "lookingforlove.asm.memory.unityweb",
+"asmFrameworkUrl": "lookingforlove.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#222C36"
+}
