@@ -1,6 +1,6 @@
 +++
 date = "2013-10-13T13:52:20+02:00"
-title = "Sh Devstories"
+title = "Development stories"
 tags = ["spacehustler"]
 +++
 It’s been a while since I posted, but I have been buried deep in rift and input
