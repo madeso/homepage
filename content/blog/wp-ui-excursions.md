@@ -1,7 +1,7 @@
 +++
 date = "2009-06-25T11:08:13+02:00"
 title = "Excursions into the UI"
-tags = ["from wordpress"]
+tags = ["from wordpress", "ui"]
 +++
 
 I recently read [scarabus’ post regarding guis](http://www.scalari.net/2009/06/25/lessons-in-gui-design/) and I wanted to follow up/ add a few notes of my own. Since scarabus considers blender to have the worst user-interface(ui for short), I’m going to compare it to other similar applications and guess why it might be non-intuitive.

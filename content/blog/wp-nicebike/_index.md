@@ -1,7 +1,7 @@
 +++
 date = "2009-07-14T11:22:52+02:00"
 title = "Say, that's a nice bike"
-tags = ["from wordpress"]
+tags = ["from wordpress", "fail"]
 +++
 So my bicycle have been trashed for some time now. Since Thursday actually. It really isnt a big deal unless I was attending No More Sweden and bicycle is my only viable transportation. I might have to rent one if it doesn’t get finished. It was actually supposed to be finished this Monday, but they are missing spare parts. That’s right, I bike hard.
 

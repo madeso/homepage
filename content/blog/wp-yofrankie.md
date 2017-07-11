@@ -1,7 +1,7 @@
 +++
 date = "2009-07-06T11:18:56+02:00"
 title = "Yo frankie!"
-tags = ["from wordpress"]
+tags = ["from wordpress", "assets"]
 +++
 Given that I sacked tetris more than a month ago, gamedev has been pretty stale at the moment. I’ve been studying fighting-systems and analysing combo-lists for the fighting-system in survivors. The usual stuff. However since the last post I’ve been thinking about remaking [Yo Frankie!](http://www.yofrankie.org/) with my tetris engine.
 

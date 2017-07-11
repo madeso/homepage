@@ -1,7 +1,7 @@
 +++
 date = "2013-05-23T13:18:10+02:00"
 title = "Flowstorm"
-tags = ["spacehustler"]
+tags = ["spacehustler", "other games"]
 +++
 {{<youtube BOI35480vdo>}}
 

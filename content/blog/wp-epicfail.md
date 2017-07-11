@@ -1,7 +1,7 @@
 +++
 date = "2009-07-29T11:26:22+02:00"
 title = "Epic fail"
-tags = ["from wordpress"]
+tags = ["from wordpress", "jamtime"]
 +++
 
 I probably should have posted this earlier, however I been sleeping and sobbing over the fact that I didn’t finish [no more sweden](http://www.nomoresweden.com/) :). A few hours before deadline all tiles in one layer went 3 tiles up, but collision-tiles were still in the same place. I though that was strange so I went to check the map in the [(external) editor](http://mapeditor.org/), and to my horror it didn’t load. No message, no crash nor any exception – just silence.

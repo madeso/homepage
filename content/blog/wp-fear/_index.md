@@ -1,7 +1,7 @@
 +++
 date = "2009-02-12T10:45:14+02:00"
 title = "Fear the consoles"
-tags = ["from wordpress"]
+tags = ["from wordpress", "review", "other games"]
 +++
 
 I recently downloaded the f.e.a.r 2 demo and I must say that I am disappointed. First and foremost I probably need to get a fresh installation of my xp to better enjoy it, not to mention better hardware, but that won’t help the poor design decisions the f.e.a.r team seems to have made. Some of these designs make it seems it’s just a port of the console version, and not a PC game as the original was, while not as obvious as the lock picking in oblivion some of the interactions stems from the consoles.

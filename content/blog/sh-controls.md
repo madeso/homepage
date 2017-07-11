@@ -1,7 +1,7 @@
 +++
 date = "2013-08-22T13:42:58+02:00"
 title = "Thoughts on the controls"
-tags = ["spacehustler"]
+tags = ["spacehustler", "input"]
 +++
 I have started implementing the basic controls for both the keyboard and joysticks
 and to test everything out I added basic thrust and torque controls, and while this

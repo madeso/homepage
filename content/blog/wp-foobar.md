@@ -1,7 +1,7 @@
 +++
 date = "2009-05-13T10:55:57+02:00"
 title = "Foobar sorting"
-tags = ["from wordpress"]
+tags = ["from wordpress", "foobar", "music"]
 +++
 
 Since some time I’ve been sorting my music collection. Going though my hard-drives and Cd’s finding all music-files and moving them to a common place and with the help of [foobar2000](http://www.foobar2000.org/) place them in a sane directory-structure and keep them there.

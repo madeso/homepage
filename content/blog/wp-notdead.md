@@ -1,7 +1,7 @@
 +++
 date = "2010-05-04T12:19:24+02:00"
 title = "I'm not dead"
-tags = ["from wordpress"]
+tags = ["from wordpress", "jamtime"]
 +++
 
 Whoa… almost 5 months since last time! I gotta post more than twice a year 🙂

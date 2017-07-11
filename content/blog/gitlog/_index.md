@@ -2,7 +2,7 @@
 date = "2017-02-22T08:38:53+01:00"
 draft = false
 title = "A better git log"
-tags = ["git", "log", "code"]
+tags = ["git", "code"]
 
 +++
 

@@ -1,7 +1,7 @@
 +++
 date = "2009-03-02T10:50:25+02:00"
 title = "There are bones in my turtle"
-tags = ["from wordpress"]
+tags = ["from wordpress", "fail", "skeleton"]
 +++
 
 Working an a skeleton loader, theese are some shots while developing it.

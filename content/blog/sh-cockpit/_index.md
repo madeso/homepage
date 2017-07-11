@@ -1,7 +1,7 @@
 +++
 date = "2013-06-08T13:31:22+02:00"
 title = "A modern cockpit view"
-tags = ["spacehustler"]
+tags = ["spacehustler", "vr"]
 +++
 
 ![A illustration of a ww2 cockpit](cockpit.png)

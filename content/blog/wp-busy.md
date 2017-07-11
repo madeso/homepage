@@ -1,7 +1,7 @@
 +++
 date = "2009-11-01T12:16:30+02:00"
 title = "I've been busy"
-tags = ["from wordpress"]
+tags = ["from wordpress", "jamtime"]
 +++
 
 Since last time I’ve entered [Ludum Dare](http://www.ludumdare.com/compo/) and actually [finished](http://www.ludumdare.com/compo/ludum-dare-15/?uid=1135) at 75ths place and a bronze in community – yay me.

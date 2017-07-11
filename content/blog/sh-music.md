@@ -1,7 +1,7 @@
 +++
 date = "2013-07-02T13:28:26+02:00"
 title = "The music"
-tags = ["spacehustler"]
+tags = ["spacehustler", "music"]
 +++
 Development on the game engine has been slow this past week so this week I’ve been thinking about the background music for the game. I don’t know the actual graphical style of the game just yet but I think I narrowed down the musical style to either some slow form of swing/jazz like this:
 
