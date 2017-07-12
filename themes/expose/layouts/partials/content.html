@@ -16,4 +16,7 @@
 {{ $newCode := "<div class=\"terminal-window\"><header><div class=\"button green\"></div><div class=\"button yellow\"></div><div class=\"button red\"></div></header><dection>$1</section></div>" }}
 {{ $c5 := $c4 | replaceRE "(<pre><code class=\"language-shell\">[^<]+</code></pre>)" $newCode }}
 
-{{ $c5 | safeHTML}}
+<!-- change smileys? -->
+{{ $c6 := $c5 | replaceRE "[☺🙂]" "<i class=\"fa fa-smile-o\"></i>" }}
+
+{{ $c6 | safeHTML}}
