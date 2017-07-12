@@ -17,6 +17,8 @@
 {{ $c5 := $c4 | replaceRE "(<pre><code class=\"language-shell\">[^<]+</code></pre>)" $newCode }}
 
 <!-- change smileys? -->
-{{ $c6 := $c5 | replaceRE "[☺🙂]" "<i class=\"fa fa-smile-o\"></i>" }}
+{{ $c6 := $c5 | replaceRE "[☺🙂]" "<i class=\"emoticon smiley\"></i>" }}
 
-{{ $c6 | safeHTML}}
+{{ $c7 := $c6 | replaceRE "[😉]" "<i class=\"emoticon wink\"></i>" }}
+
+{{ $c7 | safeHTML}}
