@@ -1,14 +1,16 @@
 {{ partial "header.html" . }}
 
-<div class="container">
-    <div class="content">
-        <div class="posts">
-            <div class="page-heading">Posts about {{ .Title }}</div>
-            {{ range .Data.Pages.ByPublishDate }}
-                {{ partial "fullpost.html" . }}
-            {{ end }}
-        </div>
-    </div>
+<div class="firstcontent">
+  <div class="page-heading">Posts about {{ .Title }}</div>
 </div>
+
+{{ $paginator := .Paginate .Data.Pages.ByPublishDate }}
+<div class="pages">
+    {{partial "pagenumber.html" $paginator }}
+    {{ range $paginator.Pages }}
+        {{ partial "fullpost.html" . }}
+    {{ end }}
+</div>
+{{partial "pagination-navigation.html" . }}
 
 {{ partial "footer.html" . }}
