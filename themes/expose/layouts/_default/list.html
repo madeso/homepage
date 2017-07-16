@@ -24,6 +24,9 @@
 
 {{ partial "footer.html" . }}
 
+<!-- only add pagination for pages that need it -->
+{{ if eq .RelPermalink (printf "/%s/" .Section) }}
 {{ $.Scratch.Set "paginator" $paginator }}
 {{ $.Scratch.Set "page" . }}
 {{partial "infinite-scroll.html" . }}
+{{ end }}
