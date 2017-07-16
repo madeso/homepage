@@ -9,14 +9,14 @@
 <!-- This if excludes sub sections from displaying other neighbouring sections in the same root section -->
 {{ if eq .RelPermalink (printf "/%s/" .Section) }}
   {{$section := .Section }}
-  {{ range $i, $p := .Site.Pages }}
-    {{ if eq .Section $section }} <!-- only display pages matching our current section -->
-      {{ if not (eq .RelPermalink (printf "/%s/" $section)) }} <!-- but dont display the _index page -->
-        {{partial "post-preview.html" . }}
-        {{partial "to-top.html" $self }}
-      {{ end }}
-    {{ end }}
+  <!-- First where only display pages matching our current section. Second where drops the _index page -->
+  {{ $paginator := .Paginate (where (where .Data.Pages "Section" $section) "RelPermalink" "!=" (printf "/%s/" $section)) }}
+  {{ template "_internal/pagination.html" . }}
+  {{ range $paginator.Pages }}
+    {{partial "post-preview.html" . }}
+    {{partial "to-top.html" $self }}
   {{ end }}
+  {{ template "_internal/pagination.html" . }}
 {{ end }}
 
 {{ partial "footer.html" . }}
