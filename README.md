@@ -12,8 +12,10 @@ featured image:
 
 # Todo
  * pagination
- * fix RSS links
  * update main texts to be less temporary
+ * fix RSS links
+ * custom domain
+ * cv section
  * update old blog links to point at new urls
  * revise old blog entries to remove less useful entries
  * progressive images?
