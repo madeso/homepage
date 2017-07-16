@@ -1,4 +1,4 @@
-<div></div>
+{{if $.Site.Params.InfiniteScroll}}
 <script>
 (function () {
   var loadPage = {{ ($.Scratch.Get "paginator").PageNumber }};
@@ -18,3 +18,4 @@
   });
 })();
 </script>
+{{end}}
