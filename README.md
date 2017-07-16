@@ -15,6 +15,7 @@ featured image:
  * update main texts to be less temporary
  * fix RSS links
  * custom domain
+ * open graph support http://ogp.me/
  * cv section
  * update old blog links to point at new urls
  * revise old blog entries to remove less useful entries
