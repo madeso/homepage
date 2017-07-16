@@ -1,6 +1,7 @@
 {{if $.Site.Params.InfiniteScroll}}
 <script>
 (function () {
+  $('#spinner').hide();
   var loadPage = {{ ($.Scratch.Get "paginator").PageNumber }};
   var totalPages = {{ ($.Scratch.Get "paginator").TotalPages }};
   $('#footer').on('inview', function (event, visible, topOrBottomOrBoth) {
@@ -10,9 +11,11 @@
         $('#footer').off('inview');
         return;
       }
+      $('#spinner').show();
       console.log("Loading next page");
       $.get('{{ ($.Scratch.Get "page").RelPermalink }}/page/' + loadPage, function (result) {
         $('#pages').append($(result).find('#pages'));
+        $('#spinner').hide();
       })
     }
   });
