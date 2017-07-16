@@ -6,12 +6,13 @@
 
 {{$self := . }}
 
+{{$section := .Section }}
+<!-- First where only display pages matching our current section. Second where drops the _index page -->
+{{ $paginator := .Paginate (where (where .Data.Pages "Section" $section) "RelPermalink" "!=" (printf "/%s/" $section)) }}
+
 <!-- This if excludes sub sections from displaying other neighbouring sections in the same root section -->
 {{ if eq .RelPermalink (printf "/%s/" .Section) }}
-  {{$section := .Section }}
-  <!-- First where only display pages matching our current section. Second where drops the _index page -->
-  {{ $paginator := .Paginate (where (where .Data.Pages "Section" $section) "RelPermalink" "!=" (printf "/%s/" $section)) }}
-  <div class="pages">
+  <div id="pages">
     {{partial "pagenumber.html" $paginator }}
     {{ range $paginator.Pages }}
       {{partial "post-preview.html" . }}
@@ -22,3 +23,7 @@
 {{ end }}
 
 {{ partial "footer.html" . }}
+
+{{ $.Scratch.Set "paginator" $paginator }}
+{{ $.Scratch.Set "page" . }}
+{{partial "infinite-scroll.html" . }}

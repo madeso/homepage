@@ -1,4 +1,4 @@
-<div class="social-footer">
+<div id="footer" class="social-footer">
 {{partial "social.html" . }}
 </div>
 
@@ -17,6 +17,7 @@ $('a[href^="{{ .Permalink }}#"]').click(function(e) {
 </script>
 
 <script src="{{.Site.BaseURL}}external/lightbox/js/lightbox.min.js"></script>
+<script src="{{.Site.BaseURL}}external/jquery.inview-1.1.2/jquery.inview.min.js"></script>
 
 </body>
 </html>

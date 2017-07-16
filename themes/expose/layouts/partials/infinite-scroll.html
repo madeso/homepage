@@ -1,0 +1,20 @@
+<div></div>
+<script>
+(function () {
+  var loadPage = {{ ($.Scratch.Get "paginator").PageNumber }};
+  var totalPages = {{ ($.Scratch.Get "paginator").TotalPages }};
+  $('#footer').on('inview', function (event, visible, topOrBottomOrBoth) {
+    if (visible == true) {
+      loadPage = loadPage + 1;
+      if (loadPage > totalPages) {
+        $('#footer').off('inview');
+        return;
+      }
+      console.log("Loading next page");
+      $.get('{{ ($.Scratch.Get "page").RelPermalink }}/page/' + loadPage, function (result) {
+        $('#pages').append($(result).find('#pages'));
+      })
+    }
+  });
+})();
+</script>
