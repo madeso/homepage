@@ -8,15 +8,15 @@
 
 <!-- This if excludes sub sections from displaying other neighbouring sections in the same root section -->
 {{ if eq .RelPermalink (printf "/%s/" .Section) }}
-{{$section := .Section }}
-{{ range $i, $p := .Site.Pages }}
-{{ if eq .Section $section }} <!-- only display pages matching our current section -->
-{{ if not (eq .RelPermalink (printf "/%s/" $section)) }} <!-- but dont display the _index page -->
-{{partial "post-preview.html" . }}
-{{partial "to-top.html" $self }}
-{{ end }}
-{{ end }}
-{{ end }}
+  {{$section := .Section }}
+  {{ range $i, $p := .Site.Pages }}
+    {{ if eq .Section $section }} <!-- only display pages matching our current section -->
+      {{ if not (eq .RelPermalink (printf "/%s/" $section)) }} <!-- but dont display the _index page -->
+        {{partial "post-preview.html" . }}
+        {{partial "to-top.html" $self }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
 {{ end }}
 
 {{ partial "footer.html" . }}
