@@ -12,13 +12,13 @@
   <!-- First where only display pages matching our current section. Second where drops the _index page -->
   {{ $paginator := .Paginate (where (where .Data.Pages "Section" $section) "RelPermalink" "!=" (printf "/%s/" $section)) }}
   <div class="pages">
-    <div class="pagenumber"><span>Page {{$paginator.PageNumber}}</span></div>
+    {{partial "pagenumber.html" $paginator }}
     {{ range $paginator.Pages }}
       {{partial "post-preview.html" . }}
       {{partial "to-top.html" $self }}
     {{ end }}
   </div>
-  {{ template "_internal/pagination.html" . }}
+  {{partial "pagination-navigation.html" . }}
 {{ end }}
 
 {{ partial "footer.html" . }}
