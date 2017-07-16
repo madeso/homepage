@@ -341,3 +341,22 @@ div.bigimage img.bigimage {
 .grin {
 	background-image: url(/img/face-grin.png);
 }
+
+ul.pagination {
+	display: block;
+	text-align: center;
+	padding-bottom: 60px;
+}
+
+.pagination li {
+	display: inline;
+	padding: 10px;
+}
+
+.pagination li:first-child, .pagination li:last-child {
+	padding: 0;
+}
+
+.pagination a:hover {
+	font-weight: bold;
+}
