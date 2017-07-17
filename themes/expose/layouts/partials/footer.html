@@ -11,7 +11,7 @@
 
 <!-- stolen from introduction theme -->
 <script>
-$('a[href^="{{ .Permalink }}#"]').click(function(e) {
+$('*').on('click', 'a[href^="{{ .Permalink }}#"]', function(e) {
     e.preventDefault();
     var target = this.hash;
     $('html, body').animate({
