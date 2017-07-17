@@ -12,8 +12,9 @@
         return;
       }
       $('#spinner').show();
-      console.log("Loading next page");
-      $.get('{{ ($.Scratch.Get "page").RelPermalink }}/page/' + loadPage, function (result) {
+      url = '{{ ($.Scratch.Get "page").Permalink }}page/' + loadPage + '/'
+      console.log("Loading next page: " + url);
+      $.get(url, function (result) {
         $('#pages').append($(result).find('#pages'));
         $('#spinner').hide();
       })
