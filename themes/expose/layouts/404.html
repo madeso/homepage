@@ -1,7 +1,16 @@
 {{ partial "header.html" . }}
 
 <div id="intro">
-  404
+  <h1>Error: 404</h1>
+  <p>Unable to find <b id="url">the request url</b></p>
 </div>
+
+<script>
+var url = window.location.pathname;
+if(url.length > 1) {
+  url = url.substring(1);
+  $( "#url" ).text(url);
+}
+</script>
 
 {{ partial "footer.html" . }}
