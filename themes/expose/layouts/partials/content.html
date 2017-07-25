@@ -3,22 +3,22 @@
 
 <!-- fixes local images -->
 {{ $newImage := (print "<img src=\"" .Permalink "$1\" alt=$3 $4>") }}
-{{ $c2 := $c | replaceRE "<img src=\"(([a-zA-Z0-9]+/)*[a-zA-Z0-9]+\\.[a-zA-Z]+)\" alt=(.*) (.*)>" $newImage }}
+{{ $c := $c | replaceRE "<img src=\"(([a-zA-Z0-9]+/)*[a-zA-Z0-9]+\\.[a-zA-Z]+)\" alt=(.*) (.*)>" $newImage }}
 
 <!-- adds a external link to all links -->
-{{ $c3 := $c2 | replaceRE "</a>" " <i class=\"fa fa-external-link\" aria-hidden=\"true\"></i></a>" }}
+{{ $c := $c | replaceRE "</a>" " <i class=\"fa fa-external-link\" aria-hidden=\"true\"></i></a>" }}
 
 <!-- adds lightbox to all images -->
 {{ $newImage2 := (print "<a href=\"$1\" data-lightbox=\"blog-" .Title "\"><img src=\"$1\" alt=$3 $4></a>") }}
-{{ $c4 := $c3 | replaceRE "<img src=\"([^\"]+)\" alt=(.*) (.*)>" $newImage2 }}
+{{ $c := $c | replaceRE "<img src=\"([^\"]+)\" alt=(.*) (.*)>" $newImage2 }}
 
 <!-- changes terminal display to a more winow like look -->
 {{ $newCode := "<div class=\"terminal-window\"><header><div class=\"button green\"></div><div class=\"button yellow\"></div><div class=\"button red\"></div></header><dection>$1</section></div>" }}
-{{ $c5 := $c4 | replaceRE "(<pre><code class=\"language-shell\">[^<]+</code></pre>)" $newCode }}
+{{ $c := $c | replaceRE "(<pre><code class=\"language-shell\">[^<]+</code></pre>)" $newCode }}
 
 <!-- change smileys? -->
-{{ $c6 := $c5 | replaceRE "[☺🙂]" "<i class=\"emoticon smiley\"></i>" }}
+{{ $c := $c | replaceRE "[☺🙂]" "<i class=\"emoticon smiley\"></i>" }}
 
-{{ $c7 := $c6 | replaceRE "[😉]" "<i class=\"emoticon wink\"></i>" }}
+{{ $c := $c | replaceRE "[😉]" "<i class=\"emoticon wink\"></i>" }}
 
-{{ $c7 | safeHTML}}
+{{ $c | safeHTML}}
