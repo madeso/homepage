@@ -38,6 +38,7 @@ div#content
 img, .screenshots img.screenshot
 {
 	max-width: 90%;
+	height:auto;
 	margin: 0;
 	padding: 0;
 	display: inline;

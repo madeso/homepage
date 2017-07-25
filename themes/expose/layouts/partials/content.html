@@ -12,6 +12,28 @@
 {{ $newImage2 := (print "<a href=\"$1\" data-lightbox=\"blog-" .Title "\"><img src=\"$1\" alt=$3 $4></a>") }}
 {{ $c := $c | replaceRE "<img src=\"([^\"]+)\" alt=(.*) (.*)>" $newImage2 }}
 
+<!-- loop through all local images and add a size -->
+<!-- need to use the scratch here since the variable scoping is weird, ie the content is only changed within the if -->
+{{ $.Scratch.Set "c" $c }}
+{{ if .IsNode }}
+  {{- $path := printf "content%s" $.RelPermalink -}}
+  {{- $files := readDir $path -}}
+  {{ $perma := $.RelPermalink }}
+  {{ $perm := $.Permalink }}
+  {{- range $files }}
+    {{$imgurl := (printf "content%s%s" $perma .Name ) }}
+    {{$realimgurl := (printf "%s%s" $perm .Name ) }}
+    {{ if or (in .Name ".jpeg") (in .Name ".jpg") (in .Name ".png") }}
+      {{ with (imageConfig $imgurl) }}
+        {{ $re := printf "<img src=\"%s\"" $realimgurl}}
+        {{ $repla := printf "<img src=\"%simg/spin.gif\" class=\"progressive__img progressive--not-loaded\" data-progressive=\"%s\" width=\"%d\" height=\"%d\" style=\"width: %dpx; height: %dpx;\" " $.Site.BaseURL $realimgurl .Width .Height .Width .Height}}
+        {{ $.Scratch.Set "c" (($.Scratch.Get "c") | replaceRE $re $repla) }}
+      {{ end }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{ $c := $.Scratch.Get "c"}}
+
 <!-- changes terminal display to a more winow like look -->
 {{ $newCode := "<div class=\"terminal-window\"><header><div class=\"button green\"></div><div class=\"button yellow\"></div><div class=\"button red\"></div></header><dection>$1</section></div>" }}
 {{ $c := $c | replaceRE "(<pre><code class=\"language-shell\">[^<]+</code></pre>)" $newCode }}
