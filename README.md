@@ -11,7 +11,7 @@ featured image:
 500 x 376 px
 
 # Todo
- * pagination
+ * pagination, fix image scaling issues
  * update main texts to be less temporary
  * fix RSS links
  * custom domain
@@ -32,3 +32,4 @@ featured image:
  * youtube embed for devlog styling?
  * improve quote with graphics?
  * game jam badge/indication for projects
+ * win/price badge/indication for projects
