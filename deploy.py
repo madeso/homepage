@@ -17,24 +17,7 @@ public = os.path.join(cwd, 'public')
 content = os.path.join(cwd, 'content')
 
 ########################################################################################################################
-# Deploy
-
-
-def generate_progressive(root, ext):
-    size = (15, 15)
-    imgs = filesin(root, ext)
-    for path in imgs:
-        f,e = os.path.splitext(path)
-        newpath = '{0}_progressive{1}'.format(f,e)
-        if os.path.exists(newpath):
-            pass
-        elif f.endswith('_progressive'):
-            pass
-        else:
-            img = Image.open(path)
-            img = img.resize(size)
-            img.save(newpath)
-
+# Generic functions
 
 def filesin(top, ext=None):
     ret = []
@@ -51,10 +34,64 @@ def filesin(top, ext=None):
     return ret
 
 
+def remove_file(file_to_remove: str, verbose: bool, dry_run: bool):
+    if verbose:
+        print('Removing file', file_to_remove)
+    if dry_run:
+        pass
+    else:
+        os.remove(file_to_remove)
+
+
+def is_dir_empty(folder: str) -> bool:
+    return not os.listdir(folder)
+
+
+def remove_files(folder: str, verbose: bool, dry: bool):
+    for root, dirs, files in os.walk(folder, topdown=False):
+        for file_name in files:
+            if file_name.startswith('.'):
+                print('Not removing file {} in {}'.format(file_name, root))
+            else:
+                file_path = os.path.join(root, file_name)
+                remove_file(file_path, verbose, dry)
+        for dir_name in dirs:
+            if dir_name.startswith('.'):
+                print('Not removing dir {} in {}'.format(dir_name, root))
+            else:
+                dir_path = os.path.join(root, dir_name)
+                if not is_dir_empty(dir_path):
+                    print('{} is not empty, ignoring...'.format(dir_path))
+                else:
+                    if verbose:
+                        print('Removing directory ', dir_path)
+                    if not dry:
+                        os.rmdir(dir_path)
+
+
 def call(args, cwd):
     p = subprocess.Popen(args, cwd=cwd, universal_newlines=True, stderr=subprocess.PIPE, stdout=subprocess.PIPE)
     p.wait()
     return p.stdout.read()
+
+
+########################################################################################################################
+# Actual deploy logic
+
+def generate_progressive(root, ext):
+    size = (15, 15)
+    imgs = filesin(root, ext)
+    for path in imgs:
+        f,e = os.path.splitext(path)
+        newpath = '{0}_progressive{1}'.format(f,e)
+        if os.path.exists(newpath):
+            pass
+        elif f.endswith('_progressive'):
+            pass
+        else:
+            img = Image.open(path)
+            img = img.resize(size)
+            img.save(newpath)
 
 
 def clean_html_files(public):
@@ -83,6 +120,12 @@ def clean_html_files(public):
         with open(path, 'w') as f:
             f.write("".join(html))
             # call(['tidy', '-m', '-utf8', '-i', path], cwd)
+
+
+def clean_public():
+    global public
+    print('Cleaning old public files')
+    remove_files(public, False, False)
 
 
 def generate_public():
@@ -129,9 +172,14 @@ def is_repo_clean(cwd):
 
 def deploy():
     global cwd
+    global public
 
     if not is_repo_clean(cwd):
         print('The working directory is dirty. Please commit any pending changes.')
+        exit(-1)
+
+    if not is_repo_clean(public):
+        print('The public directory is dirty. Please commit any pending changes.')
         exit(-1)
 
     # print('Generating images')
@@ -140,13 +188,16 @@ def deploy():
 
     print('Deploying updates to GitHub...')
 
-    # generate new copy
+    # first clean hugo folder
+    clean_public()
+
+    # then generate a new fresh copy
     generate_public()
 
-    # update local github.io repo
+    # commit and push local github.io repo
     update_github_repo()
 
-    # update homepage repo
+    # commit in the homepage repo
     update_homepage_repo()
 
     print('Done')
@@ -156,34 +207,9 @@ def dirty_repo_as_string(repo):
     return 'Clean' if is_repo_clean(repo) else 'Dirty'
 
 
-def remove_file(file_to_remove: str, verbose: bool, dry_run: bool):
-    if verbose:
-        print('Removing file', file_to_remove)
-    if dry_run:
-        if not verbose:
-            print('Removing file', file_to_remove)
-    else:
-        os.remove(file_to_remove)
-
-
-def remove_files(folder: str, verbose: bool, dry: bool):
-    for root, dirs, files in os.walk(folder, topdown=False):
-        for file_name in files:
-            if file_name.startswith('.'):
-                print('Ignoring {} in {}'.format(file_name, root))
-            else:
-                file_path = os.path.join(root, file_name)
-                remove_file(file_path, verbose, dry)
-        for dir_name in dirs:
-            dir_path = os.path.join(root, dir_name)
-            if verbose:
-                print('Removing directory ', dir_path)
-            if not dry:
-                os.rmdir(dir_path)
-
-
 ########################################################################################################################
 # Sub commands
+
 
 def handle_deployment(args):
     deploy()
@@ -206,8 +232,7 @@ def handle_generate_public(args):
 
 
 def handle_clean(args):
-    global public
-    remove_files(public, False, True)
+    clean_public()
 
 
 ########################################################################################################################
