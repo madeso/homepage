@@ -91,7 +91,7 @@ def generate_public():
     print('Generating public files')
     call('hugo', cwd)
 
-    print('Cleaning up public files')
+    print('Cleaning up public html files')
     clean_html_files(public)
 
 
@@ -152,6 +152,10 @@ def deploy():
     print('Done')
 
 
+def dirty_repo_as_string(repo):
+    return 'Clean' if is_repo_clean(repo) else 'Dirty'
+
+
 ########################################################################################################################
 # Sub commands
 
@@ -166,8 +170,8 @@ def handle_info(args):
     global content
 
     print('Git commit message would be', gitmessage)
-    print('Working direction is', cwd)
-    print('Public directory is', public)
+    print('Working direction is', cwd, dirty_repo_as_string(cwd))
+    print('Public directory is', public, dirty_repo_as_string(public))
     print('Content directory is', content)
 
 
