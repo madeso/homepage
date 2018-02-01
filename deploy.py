@@ -156,6 +156,29 @@ def dirty_repo_as_string(repo):
     return 'Clean' if is_repo_clean(repo) else 'Dirty'
 
 
+def remove_file(file_to_remove: str, verbose: bool, dry_run: bool):
+    if verbose:
+        print('Removing file', file_to_remove)
+    if dry_run:
+        if not verbose:
+            print('Removing file', file_to_remove)
+    else:
+        os.remove(file_to_remove)
+
+
+def remove_files(folder: str, verbose: bool, dry: bool):
+    for root, dirs, files in os.walk(folder, topdown=False):
+        for file_name in files:
+            file_path = os.path.join(root, file_name)
+            remove_file(file_path, verbose, dry)
+        for dir_name in dirs:
+            dir_path = os.path.join(root, dir_name)
+            if verbose:
+                print('Removing directory ', dir_path)
+            if not dry:
+                os.rmdir(dir_path)
+
+
 ########################################################################################################################
 # Sub commands
 
@@ -179,6 +202,11 @@ def handle_generate_public(args):
     generate_public()
 
 
+def handle_clean(args):
+    global public
+    remove_files(public, False, False)
+
+
 ########################################################################################################################
 # Main
 
@@ -194,6 +222,9 @@ def main():
 
     sub = sub_parsers.add_parser('generate', help='Generate github.io data without publishing')
     sub.set_defaults(func=handle_generate_public)
+
+    sub = sub_parsers.add_parser('clean', help='Clean all generated github.io data')
+    sub.set_defaults(func=handle_clean)
 
     args = parser.parse_args()
     if args.command_name is not None:
