@@ -169,8 +169,11 @@ def remove_file(file_to_remove: str, verbose: bool, dry_run: bool):
 def remove_files(folder: str, verbose: bool, dry: bool):
     for root, dirs, files in os.walk(folder, topdown=False):
         for file_name in files:
-            file_path = os.path.join(root, file_name)
-            remove_file(file_path, verbose, dry)
+            if file_name.startswith('.'):
+                print('Ignoring {} in {}'.format(file_name, root))
+            else:
+                file_path = os.path.join(root, file_name)
+                remove_file(file_path, verbose, dry)
         for dir_name in dirs:
             dir_path = os.path.join(root, dir_name)
             if verbose:
@@ -204,7 +207,7 @@ def handle_generate_public(args):
 
 def handle_clean(args):
     global public
-    remove_files(public, False, False)
+    remove_files(public, False, True)
 
 
 ########################################################################################################################
