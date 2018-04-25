@@ -1,9 +1,0 @@
-{{ if .Params.tags }}
-  <div class="taglist">
-  {{ range .Params.tags }}
-    &nbsp;<a class="tag" href="{{ $.Site.LanguagePrefix }}/tags/{{ . | urlize }}">#{{ . }}</a>
-  {{ end }}
-
-  or <a class="tag" href="{{ $.Site.LanguagePrefix }}/tags/">(all)</a>
-  </div>
-{{ end }}
