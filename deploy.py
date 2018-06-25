@@ -52,6 +52,8 @@ def remove_files(folder: str, verbose: bool, dry: bool):
         for file_name in files:
             if file_name.startswith('.'):
                 print('Not removing file {} in {}'.format(file_name, root))
+            elif file_name == 'CNAME':
+                print('Not removing CNAME')
             else:
                 file_path = os.path.join(root, file_name)
                 remove_file(file_path, verbose, dry)
