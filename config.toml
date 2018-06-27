@@ -1,4 +1,4 @@
-baseURL = "https://madeso.github.io/"
+baseURL = "http://i.madeso.me/"
 languageCode = "en-us"
 title = "Gustav Jansson"
 theme = "expose"
