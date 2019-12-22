@@ -10,14 +10,12 @@ ShortDateFormat = "2 January 2006"
 latestpostcount = 3
 latestdevlogcount = 3
 posts_navigation = true
-sharebuttons = true
+sharebuttons = false
 highlightjs = true
 InfiniteScroll = true
 
 [Params.social]
 Twitter = "sirGustav"
 Reddit = "sirGustav"
-Linkedin = "gsmjansson"
 Keybase = "madeso"
 Github = "madeso"
-Photos = "https://plus.google.com/photos/104914211472274668508/albums/5824570292610928049"
