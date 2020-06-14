@@ -2,6 +2,7 @@ baseURL = "https://i.madeso.me/"
 languageCode = "en-us"
 title = "Gustav Jansson"
 theme = "expose"
+pygmentsUseClasses=true
 # disqusshortname = "madesopage"
 
 [Params]
