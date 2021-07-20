@@ -13,7 +13,7 @@ latestdevlogcount = 3
 posts_navigation = true
 sharebuttons = false
 highlightjs = true
-InfiniteScroll = true
+InfiniteScroll = false
 
 [Params.social]
 Twitter = "sirGustav"
