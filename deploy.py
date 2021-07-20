@@ -80,21 +80,6 @@ def call(args, cwd):
 ########################################################################################################################
 # Actual deploy logic
 
-def generate_progressive(root, ext):
-    size = (15, 15)
-    imgs = filesin(root, ext)
-    for path in imgs:
-        f,e = os.path.splitext(path)
-        newpath = '{0}_progressive{1}'.format(f,e)
-        if os.path.exists(newpath):
-            pass
-        elif f.endswith('_progressive'):
-            pass
-        else:
-            img = Image.open(path)
-            img = img.resize(size)
-            img.save(newpath)
-
 
 def clean_html_files(public):
     rebegin = [
@@ -183,10 +168,6 @@ def deploy():
     if not is_repo_clean(public):
         print('The public directory is dirty. Please commit any pending changes.')
         exit(-1)
-
-    # print('Generating images')
-    # generate_progressive(content, '.png')
-    # generate_progressive(content, '.jpg')
 
     print('Deploying updates to GitHub...')
 
