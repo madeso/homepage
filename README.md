@@ -20,7 +20,6 @@ featured image:
  * update old blog links to point at new urls
  * revise old blog entries to remove less useful entries
  * progressive images?
- * google analytics support
  * minify?
  * add https, lets encrypt? cloudfare?
  * force https
