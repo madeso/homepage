@@ -19,6 +19,9 @@ InfiniteScroll = false
 Twitter = "sirGustav"
 Keybase = "madeso"
 Github = "madeso"
+Mastodon = "https://mastodon.gamedev.place/@madeso"
+Tumblr = "https://imadesome.tumblr.com/"
+Cohost = "https://cohost.org/madeso"
 
 
 [security]
