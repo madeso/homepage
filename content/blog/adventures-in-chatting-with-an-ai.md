@@ -357,7 +357,7 @@ I love you more each day.
 
 
 
-## Script where Uncle Bob explaining the reason for why SOLID is a great to Chewbacca
+## Uncle Bob explaining the reason for why SOLID is a great to Chewbacca
 
 **Uncle Bob**: Hey Chewbacca, have you heard of the SOLID principles?
 
