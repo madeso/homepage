@@ -15,6 +15,14 @@ sharebuttons = false
 highlightjs = true
 InfiniteScroll = false
 
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 2
+    ordered = true
+    startLevel = 2
+
+
 [Params.social]
 Twitter = "sirGustav"
 Keybase = "madeso"
