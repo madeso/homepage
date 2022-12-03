@@ -1,6 +1,6 @@
 +++
 date = "2022-12-03T18:16:08+01:00"
-title = "Adventures in Chatting With an AI"
+title = "Adventures in chatting with an AI"
 
 +++
 
