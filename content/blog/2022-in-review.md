@@ -14,8 +14,7 @@ Feature wise most user facing would be the "through the lens" [camera movement](
 
 
 ## Tred
-Speaking of euphoria, the next version of euphoria, [tred](https://github.com/madeso/tred), rendering got a cleanup and refactor, and I started added the world concept.
-tred: cleanup, refactor, world concept
+Speaking of euphoria, the next version of euphoria rendering, [tred](https://github.com/madeso/tred) got a cleanup and refactor, and I started added the world concept.
 
 ## Fyro
 I also got excited about the thought of a simple engine, something like a [pico-8](https://www.lexaloffle.com/pico-8.php) [love2d](https://love2d.org/) mashup and forked the 2d rendering from tred and started removing all 3d and simplifying it and calling it [Fyro](https://github.com/madeso/fyro). This split allowed tred to focus on 3d with 2d and fyro to only focus on 2d. The 2d sample games was moved to fyro.
