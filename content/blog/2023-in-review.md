@@ -1,6 +1,7 @@
 +++
 date = "2024-01-06T20:54:16+01:00"
 title = "2023 in review"
+tags = ["year-in-review"]
 +++
 
 Another year full of devlogs and another review of what I have achieved and failed to achieve.

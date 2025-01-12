@@ -1,6 +1,7 @@
 +++
 date = "2023-01-01T17:19:08+01:00"
 title = "2022 in review"
+tags = ["year-in-review"]
 +++
 
 I recently realized that I've been writing my devlog since 2017 but I have never compiled all the devblogs into a longer post starting from today. I'll summarize and write a smallish review of what I've done on all my hobby projects the past year.
