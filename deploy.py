@@ -91,7 +91,7 @@ def clean_html_files(public):
     publichtml = filesin(public, '.html')
     for path in publichtml:
         html = []
-        with open(path, 'r') as f:
+        with open(path, 'r', encoding='utf-8') as f:
             inside = 0
             for line in f:
                 for r in rebegin:
@@ -103,7 +103,7 @@ def clean_html_files(public):
                         html.append(line)
                 else:
                     html.append(line)
-        with open(path, 'w') as f:
+        with open(path, 'w', encoding='utf-8') as f:
             f.write("".join(html))
             # call(['tidy', '-m', '-utf8', '-i', path], cwd)
 
