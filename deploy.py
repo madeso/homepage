@@ -4,7 +4,6 @@ import subprocess
 import re
 import datetime
 import argparse
-from PIL import Image
 
 ########################################################################################################################
 # Global contants
