@@ -160,7 +160,21 @@ def deploy():
     global cwd
     global public
 
-   
+    if not is_repo_clean(cwd):
+        print('The working directory is dirty. Please commit any pending changes.')
+        exit(-1)
+
+    if not is_repo_clean(public):
+        print('The public directory is dirty. Please commit any pending changes.')
+        exit(-1)
+
+    print('Deploying updates to GitHub...')
+
+    # first clean hugo folder
+    clean_public()
+
+    # then generate a new fresh copy
+    generate_public()
 
     # commit and push local github.io repo
     update_github_repo()
