@@ -1,5 +1,4 @@
 baseURL = "https://madeso.github.io/"
-languageCode = "en-us"
 title = "Gustav Jansson"
 theme = "expose"
 pygmentsUseClasses=true
@@ -14,6 +13,15 @@ posts_navigation = true
 sharebuttons = false
 highlightjs = true
 InfiniteScroll = false
+
+[languages]
+  [languages.en]
+    direction = ''
+    locale = 'en-US'
+    disabled = false
+    label = ''
+    title = ''
+    weight = 0
 
 
 [markup]
