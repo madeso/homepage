@@ -1,6 +1,7 @@
 +++
 date = "2019-12-22T21:47:39+01:00"
 title = "CV"
+type = "plain"
 +++
 
 ## Experience
