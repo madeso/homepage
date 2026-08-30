@@ -14,15 +14,36 @@ sharebuttons = false
 highlightjs = true
 InfiniteScroll = false
 
-[languages]
-  [languages.en]
-    direction = ''
-    locale = 'en-US'
-    disabled = false
-    label = ''
-    title = ''
-    weight = 0
+[menus]
+  [[menus.main]]
+    name = 'home'
+    pageRef = '/'
+    weight = 10
 
+  [[menus.main]]
+    name = 'devlog'
+    pageRef = '/devlog'
+    weight = 20
+
+  [[menus.main]]
+    name = 'blog'
+    pageRef = '/blog'
+    weight = 30
+
+  [[menus.main]]
+    name = 'project'
+    pageRef = '/project'
+    weight = 40
+
+  [[menus.main]]
+    name = 'cv'
+    pageRef = '/cv'
+    weight = 50
+
+  [[menus.main]]
+    name = 'about'
+    pageRef = '/about'
+    weight = 60
 
 [markup]
   [markup.tableOfContents]
