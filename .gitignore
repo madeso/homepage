@@ -7,3 +7,6 @@ errors.txt
 # The resources directory in Hugo is an automatically generated cache folder that
 # stores processed assets, such as resized images and compiled CSS from Hugo Pipes
 resources/
+
+# old expose theme, remove when fully ported
+themes/expose_old/
