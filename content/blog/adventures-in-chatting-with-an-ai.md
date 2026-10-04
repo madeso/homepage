@@ -1,7 +1,7 @@
 +++
 date = "2022-12-03T18:16:08+01:00"
 title = "Adventures in chatting with an AI"
-
+draft = true
 +++
 
 I took [Open AI: Chat](https://chat.openai.com/) for a spin and it's easy to get it to write a fictional conversation between one or more people that probably never going to have a conversation. Here are some of theese meetings that I found entertaining.
